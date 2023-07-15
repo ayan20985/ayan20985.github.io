@@ -17,7 +17,7 @@ lang: en-GB
 title: Ayan Ali
 email: ayanais123@gmail.com
 description:
-baseurl: # the optional subpath of your site, e.g. "/blog"
+baseurl: ""
 url: https://420ayan420.github.io
 author:
   name: Ayan Ali
