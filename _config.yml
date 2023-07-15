@@ -13,22 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-lang: en-US
-title: My Awesome Site
-email:
+lang: en-GB
+title: Ayan Ali
+email: ayanais123@gmail.com
 description:
 baseurl: # the optional subpath of your site, e.g. "/blog"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: https://420ayan420.github.io
 author:
-  name:
-  twitter:
-  picture:
-twitter_username:
-github_username:
-logo: # path of site logo, e.g. "/assets/images/logo.png"
-search: # true, false (default)
+  name: Ayan Ali
+github_username: 420Ayan420
+logo: /assets/images/logo.png
+search: true
 search_full_content: false # true, false (default)
-search_provider: # lunr (default), algolia
+search_provider: lunr
 algolia:
   application_id: # YOUR_APPLICATION_ID
   index_name: # YOUR_INDEX_NAME
@@ -74,6 +71,13 @@ exclude:
   - /docs # ignore Basically Basic sample site
   - /example # ignore Basically Basic dev site
 
+# Collections
+collections:
+  research:
+    output: true
+    permalink: /:collection/:path/
+    path: /_posts/research
+
 # Front Matter Defaults
 defaults:
   # _posts
@@ -83,3 +87,9 @@ defaults:
     values:
       layout: post
       read_time: true
+  # _research
+  - scope:
+      path: "/_posts/research"
+      type: research
+    values:
+      layout: post
