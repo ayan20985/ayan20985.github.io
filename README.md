@@ -1,1 +1,0 @@
-A personal website for posting my portfolio, things I learned, a blog, various technical ramblings, etc. Powered by Jekyll.
