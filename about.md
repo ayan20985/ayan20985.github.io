@@ -17,8 +17,9 @@ Greetings! I am Ayan Ali; a Year 12 student studying A-levels. I really enjoy ma
 - Designed, manufactured, and tested my own solar-powered water desalination device for regions with polluted water. (Produced a complementary paper of ~7500 words outlining the process of research, construction, usage, etc.)
 - Designed, manufactured, and tested my own deployable water catcher device for arid regions. (Produced a complementary paper of ~35000 words outlining the process of research, construction, usage, etc.)
 - Designed, programmed, and tested my own digital logic circuit simulator.
-- my own CSS+HTML+JS based website. With in-progress ray-traced graphics for coolness factor on website.
-- Produced a 20000 word research paper on perpetual solar flight as part of my EPQ. (with perhaps publishing an extended 25000-35000 word paper).
+- Deployed my own CSS+HTML+JS based website. With in-progress ray-traced graphics for coolness factor on website.
+
+- Produced a 12000 word research paper on perpetual solar flight as part of my EPQ. (with perhaps publishing an extended 25000-35000 word paper).
 - Completed AS-levels in Summer 2023.
 
 # Completed Examinations
