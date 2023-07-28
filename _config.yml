@@ -26,6 +26,7 @@ logo: /assets/images/logo.png
 search: true
 search_full_content: false # true, false (default)
 search_provider: lunr
+copyright: "2023, Made with <3 and strawberry flavored milk."
 algolia:
   application_id: # YOUR_APPLICATION_ID
   index_name: # YOUR_INDEX_NAME
@@ -73,11 +74,14 @@ exclude:
 
 # Collections
 collections:
+  portfolios:
+    output: true
+    permalink: /:collection/:path/
+    path: /_portfolios
   research:
     output: true
     permalink: /:collection/:path/
-    path: /_posts/research
-
+    path: /_research
 # Front Matter Defaults
 defaults:
   # _posts
@@ -87,9 +91,15 @@ defaults:
     values:
       layout: post
       read_time: true
+  # _portfolios
+  - scope:
+      path: "/_portfolios"
+      type: portfolios
+    values:
+      layout: post
   # _research
   - scope:
-      path: "/_posts/research"
+      path: "/_research"
       type: research
     values:
       layout: post
