@@ -82,6 +82,10 @@ collections:
     output: true
     permalink: /:collection/:path/
     path: /_research
+  artwork:
+    output: true
+    permalink: /:collection/:path/
+    path: /_artwork
 # Front Matter Defaults
 defaults:
   # _posts
@@ -101,5 +105,11 @@ defaults:
   - scope:
       path: "/_research"
       type: research
+    values:
+      layout: post
+  # _artwork
+  - scope:
+      path: "/_artwork"
+      type: artwork
     values:
       layout: post
