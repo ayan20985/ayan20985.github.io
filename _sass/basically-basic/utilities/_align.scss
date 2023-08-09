@@ -19,6 +19,7 @@ a img.align-center {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  border-radius: 15px; //Adding rounded corners here for images.
 }
 
 figure.align-center {
@@ -27,6 +28,7 @@ figure.align-center {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 15px; //Adding rounded corners here for images.
   }
 
   figcaption {
@@ -39,6 +41,7 @@ a img.align-right {
   margin-bottom: 1rem;
   margin-left: 1rem;
   float: right;
+  border-radius: 15px; //Adding rounded corners here for images.
 }
 
 .align-left,
@@ -46,6 +49,7 @@ a img.align-left {
   margin-right: 1rem;
   margin-bottom: 1rem;
   float: left;
+  border-radius: 15px; //Adding rounded corners here for images.
 }
 
 /*

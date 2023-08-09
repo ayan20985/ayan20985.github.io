@@ -74,10 +74,10 @@ exclude:
 
 # Collections
 collections:
-  portfolios:
+  projects:
     output: true
     permalink: /:collection/:path/
-    path: /_portfolios
+    path: /_projects
   research:
     output: true
     permalink: /:collection/:path/
@@ -95,10 +95,10 @@ defaults:
     values:
       layout: post
       read_time: true
-  # _portfolios
+  # _projects
   - scope:
-      path: "/_portfolios"
-      type: portfolios
+      path: "/_projects"
+      type: projects
     values:
       layout: post
   # _research

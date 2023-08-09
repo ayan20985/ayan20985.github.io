@@ -1,0 +1,15 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% include carousel.html height="500" unit="px" duration="7" number="1" %}
+{% include carousel.html height="500" unit="px" duration="7" number="2" %}
+
+<br>
+<br>
+
+<div class="entries-{{ page.entries_layout | default: 'list' }}">
+  {% include documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order %}
+</div>

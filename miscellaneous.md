@@ -8,7 +8,7 @@ permalink: /miscellaneous/
 Under Construction.
 
 # Site Documentation
-Site documentation is availible [here]({{ site.url }}{{ site.baseurl }}\portfolios\website-deployment).
+Site documentation is availible [here]({{ site.url }}{{ site.baseurl }}\projects\website-deployment).
 
 # Reading List
 Under Construction.
