@@ -9,14 +9,12 @@ comments: false
 Adding rounded corners would make the website a lot more pleasant to look at, allow for a more seamless design especially on the art work page, and add just a little bit more spice.
 
 {% raw %}
-<br>
 # Overview 
 First let us start by listing the locations I need to implement rounded image corners; retrospectively speaking, in order from easiest to hardest to implement:
 1.	Rounded corners on images that are inserted onto pages called posts such as this one.
 2.	Rounded corners on images that are in image carousels.
 3.	Rounded corners on images that are displayed as thumbnails for the different entries on pages such as artwork or projects.
 
-<br>
 # The actual code required
 To add rounded image corners some simple css   must be used:
 ```css
@@ -31,7 +29,6 @@ border-radius: 10px;
 ```
 Now, the challenge lies in us figuring out how to insert this code into the already existing infrastructure th  at has been already created in the Jekyll theme.
 
-<br>
 # (1) Rounded corners on images that are inserted on pages.
 This is the most simple implementation of rounded image corners, when an image is inserted into a markdown file we use the following code:
 ```md
@@ -102,7 +99,6 @@ a img.align-left {
 
 This sort of implementation also ensures that whatever layout of image we use on a page all the image's corners will be rounded.
 
-<br>
 # (2) Rounding the corners of images in image carousels.
 During the implementation of image carousels noted [here]({{ site.url }}{{ site.baseurl }}/site%20documentation/2023/06/30/Integrating-Image-Carousel.html) we created a file called carousel.html to handle the rendering of the image carousel, it is located at:
 ```
@@ -120,7 +116,6 @@ From there we can simply insert our code into the .carousel_slide class:
 ```
 Here we have rounded the corners of the image carousel. If you would like to know how the overall image carousel code works please refer to the post linked in this section.
 
-<br>
 # (3) Adding rounded corners to thumbnails in collection layout.
 Whenever a page is created, there is a front matter that defines the attributes of the page, for example:
 ```markdown
@@ -234,7 +229,7 @@ Specifically, I have added:
   <img class="entry-image u-photo" src="{{ entry_image }}" alt="">
 </div>
 ```
-<br>
+
 # Conclusion
 While rounded corners on images may seem to be a simple task some of the techniques I have mentioned here may prove to be useful for integrating further features to the existing Jekyll theme if I so wish to do so.
 {% endraw %}

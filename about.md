@@ -22,7 +22,7 @@ Hello! My name is Ayan Ali; I am a Year 12 student currently studying A-levels. 
 - Produced a 12000 word research paper on perpetual solar flight as part of my EPQ. (with perhaps publishing an extended 25000-35000 word paper).
 - Completed AS-levels in Summer 2023.
 
-# Completed Examinations
+<!-- # Completed Examinations
 - Edexcel IGCSE Mathematics A
 - Edexcel IGCSE Further Mathematics
 - Edexcel IGCSE English ESL
@@ -48,4 +48,4 @@ Hello! My name is Ayan Ali; I am a Year 12 student currently studying A-levels. 
 - AP Physics C Electromagents and Magnetism
 - AP Calculus BC
 - AP Computer Science A
-- AP Computer Science Principles
+- AP Computer Science Principles -->
