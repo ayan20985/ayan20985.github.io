@@ -1,7 +1,7 @@
 ---
 layout: page
 paginate: true
-alt_title: "TEST Ayan's Compendium of Assorted Ramblings"
+alt_title: "Ayan's Compendium of Assorted Ramblings"
 sub_title: "Ripping pages, welding joints, experimenting experimentally, burning electronics, and tuning PIDs since 2007."
 ---
 - Learn more about me in my [about](/about) section
