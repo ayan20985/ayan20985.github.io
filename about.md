@@ -4,7 +4,7 @@ layout: about
 permalink: /about/
 ---
 # Whoms't
-Hello! My name is Ayan Ali; I am a Year 12 student currently studying A-levels. I love making things, creating 3D art, and working on complex problems in an engineering context all whilst leaving the world a little better than I found it. This website acts as a place for me to share my passions in such subjects (and mayhaps some ramblings on niche topics).
+Hello! My name is Ayan Ali; I am a Year 13 student currently studying A-levels. I love making things, creating 3D art, and working on complex problems in an engineering context all whilst leaving the world a little better than I found it. This website acts as a place for me to share my passions in such subjects (and mayhaps some ramblings on niche topics).
 
 # Notable Achievements
 - Completed IGCSEs in Summer 2022.
