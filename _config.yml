@@ -39,7 +39,7 @@ google_analytics: G-VYN3H1S83K
 # Build settings
 markdown: kramdown
 # theme: jekyll-theme-basically-basic
-plugins: # previsously gems
+plugins: # previously gems
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
