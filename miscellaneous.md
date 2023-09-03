@@ -7,10 +7,14 @@ permalink: /miscellaneous/
 # Usefull Resources
 - **[The Art + Science of PCB Design @ MIT](https://pcb.mit.edu/)**  
 Open-source resources for learning PCB design.
+
 - **[NandGame.com](https://nandgame.com/)**  
-Cool game that teaches computer architecture in a fun way, start with only two logic gates and from there build a complete computer. This resource is free
+Cool game that teaches computer architecture in a fun way, start with only two logic gates and from there build a complete computer. This resource is free.
 - **[Turing Complete](https://store.steampowered.com/app/1444480/Turing_Complete/)**  
-Another cool game that teaches computer architecture in a fun way, paid but very worth it.
+Another cool game that teaches computer architecture in a fun way through puzzles, paid but very worth it.
+- **[Nand2Tetris.org](https://www.nand2tetris.org/)**  
+Offers a course that allows you to build a 16-bit complete general purpose computer from the logic gates up using HDL in part 1, and part 2 teaches you on creating your own compiler assembler and creating some programs on it. The course is offered for free on [coursera.org](https://www.coursera.org/).
+
 
 # Site Documentation
 Site documentation is availible [here]({{ site.url }}{{ site.baseurl }}\projects\2023-06-28-website-deployment).
@@ -37,7 +41,10 @@ Useful for integrating niche and specific mathematics with computer programming,
 An extremely useful book for learning computer architecture from first principles, helped me begin designing my own 16-bit computer by using the general idea of how a computer is exactly made right down to the logic gates. It also addresses the short-comings of A-level Computer science where they integrate too much "ICT" related information such as networking/communication and too little about computer architecture in my opinion.
 
 **The Elements of Computing Systems: Building a Modern Computer from First Principles by Noam Nisan and Shimon Schocken**  
-Complements the course that is offered [here](https://www.nand2tetris.org/), again another great book giving the construction of computer from first principles. It included the desing of the HACK 16-bit general computer which the authors have developed in HDL.
+Complements the course that is offered [here](https://www.nand2tetris.org/), again another great book giving the construction of computer from first principles. It includes the Design of the HACK 16-bit general computer which the authors have developed in HDL.
+
+**Digital Computer Electronics by Albert P. Malvino and Jerald A Brown**
+An invaluable resource for those interested in computer architecture from the ground up. Offers deep dive into the inner workings of computers, helping readers understand how they are constructed, from logic gates to more complex components. 
 
 ## Stoicism and Philosophical Premises    
 **Enchiridion of Epictetus by Epictetus**  
@@ -51,9 +58,24 @@ Structured as a set of personal notes, the emperors sayings are quite useful as 
 The book provides an overview of the history of Homo sapiens, the species to which modern humans belong. It presents a comprehensive and thought-provoking account of human history, from the emergence of Homo sapiens in Africa to the present day. Please read this before The Precipice as it really does give a "big-idea" style picture in your mind.
 
 **The Precipice: Existential Risk and the Future of Humanity by Toby Ord**  
-If all goes well, human history is just beginning. Our species could survive for billions of years - enough time to end disease, poverty, and injustice, and to flourish in ways unimaginable today. While there are aspects that I do not agree with, it is a brilliant book by a brilliant author and definitely worth reading even if you disagree with what Toby Ord says as it really does get you thinking. I have also made a review in the blog [here]({{ site.url }}{{ site.baseurl }}\posts\2023-04-16-The-Precipice-Review)
+*"If all goes well, human history is just beginning. Our species could survive for billions of years - enough time to end disease, poverty, and injustice, and to flourish in ways unimaginable today."* While there are aspects that I do not agree with, it is a brilliant book by a brilliant author and definitely worth reading even if you disagree with what Toby Ord says as it really does get you thinking. I have also made a review in the blog [here]({{ site.url }}{{ site.baseurl }}\posts\2023-04-16-The-Precipice-Review)
+
+## Mechanical Design
+**Build Your Own Metal Working Workshop From Scrap by David J. Gingery**  
+This series of books covering starting from basically nothing and creating precision machining tools through a set of 7 projects. You are able to buy in a combined book where all the books have been incorporated into one mega book or as a set of 7 separate books with each book coressponding to a separate project. The books are as follows:
+- The Charcoal Foundry
+- The Metal Lathe
+- The Metal Scrapper
+- The Milling Machine
+- The Drill Press
+- The Dividing head & Deluxe Accessories
+- Designing & Building the Sheet Metal Brake
+The 7th book is not really part of the series but can still be made if needed in your workshop. The books also have detailed technical drawings and BOMs allowing you to easily replicate what is in the books.
 
 ## Just for Fun
+**Beyond the Lines by Daisuke Tajima**  
+Awesome illustrations of immense scale and intensity, really gets you thinking sometimes.
+
 **The Entire Middle Earth series of books by J.R.R. Tolkien**  
 While it is possible to read the whole of the Middle Earth Series is order of publication, it would make the most sense to read in chronological order of events:
 - The Silmarillion (1977)
@@ -65,6 +87,7 @@ While it is possible to read the whole of the Middle Earth Series is order of pu
 - The Fellowship of the Ring (1954)
 - The Two Towers (1954)
 - The Return of the King (1955)
+
 If you do not have time to read the entire Middle Earth Series or would just like to read the books before you watch the Lord of the Rings movies (and now TV show), I would recommend to read the following books in chronological order:
 - The Hobbit (1937)
 - The Fellowship of the Ring (1954)
