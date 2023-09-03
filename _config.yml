@@ -34,7 +34,7 @@ algolia:
   powered_by: # true (defa  ult), false
 
 # Google Analytics
-google_analytics: G-VYN3H1S83K
+google_analytics: UA-283207721-2
 
 # Build settings
 markdown: kramdown
