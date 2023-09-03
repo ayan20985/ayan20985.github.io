@@ -33,7 +33,7 @@ algolia:
   search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
   powered_by: # true (defa  ult), false
 
-# Google Analytics
+# Google Analytics VVV
 google_analytics: G-VYN3H1S83K
 
 # Build settings
