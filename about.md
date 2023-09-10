@@ -12,7 +12,7 @@ Hello! My name is Ayan Ali; I am a Year 13 student currently studying A-levels. 
 - Awarded Pearson Edexcel Excellence Award for outstanding results at IGCSE.
 - Took part in an "Academy of Excellence" enrichment program for 5+ years.
 
-- Published a 3D-modelling curriculum with the aim of getting students from grades 9-11 more involved with CAD/CAM and STEM in general, in essence it teaches how to design systems from 0 to an intermediate level in an engineering based context. Deployed to 11 schools currently or around ~3100 eligible students. Plans to deploy internationally to ~53 schools or ~15000 eligible students.
+- Published a 3D-modelling curriculum with the aim of getting students from grades 9-11 more involved with CAD/CAM and STEM in general, in essence it teaches how to design systems from 0 to an intermediate level in an engineering based context. Deployed to 11 schools currently or around ~2500 eligible students. <!-- Plans to deploy internationally to ~53 schools or ~15000 eligible students. -->
 - Designed, manufactured, and tested my own Cantilever 3D-printer.
 - Designed, manufactured, and tested my own deployable water catcher device for arid regions. (Produced a paper of ~35000 words outlining the process of research, construction, usage, etc.)
 - Designed, programmed, and tested my own digital logic circuit simulator to simulate logic components as a stepping stone for learning more about computer architecture and designing my own general-purpose 16-bit computer with a fully programable instruction set and it's own compiler.
