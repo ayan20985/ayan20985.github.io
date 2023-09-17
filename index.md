@@ -21,7 +21,7 @@ sub_title: "Ripping pages, welding joints, experimenting experimentally, burning
 </style>
 
 <div id="content_container">
-  Admissions staff? Please click <a href="/admissions/">here</a> to be directed to further documents of mine.
+  Are you admissions staff? Please click <a href="/admissions/">here</a> to be directed to additional documents that you may find useful.
 </div>
 
 - Learn more about me in my <a href="/about/">about</a> section
