@@ -4,7 +4,7 @@ sub_title: "Below are resources I find usefull, site documentation, and my readi
 layout: page
 permalink: /miscellaneous/
 ---
-# Usefull Resources
+# Useful Resources
 - **[The Art + Science of PCB Design @ MIT](https://pcb.mit.edu/)**  
 Open-source resources for learning PCB design.
 
@@ -45,6 +45,8 @@ Complements the course that is offered [here](https://www.nand2tetris.org/), aga
 
 **Digital Computer Electronics by Albert P. Malvino and Jerald A Brown**
 An invaluable resource for those interested in computer architecture from the ground up. Offers deep dive into the inner workings of computers, helping readers understand how they are constructed, from logic gates to more complex components. 
+
+**Chip War: The Fight for the World's Most Critical Technology by Chris Miller**
 
 ## Stoicism and Philosophical Premises    
 **Enchiridion of Epictetus by Epictetus**  
@@ -111,3 +113,7 @@ If you would like the entire history of the all of Middle Earth read the followi
 - The Nature of Middle-earth (2021)
 
 Some last notes to make would be that The Silmarillion was quite a challenging read for me so I listened to it as an audiobook while following the text in a physical copy of the book. It should also be noted that The Fall of Numenor (2022) was recently released, it contains the same text as the books The Silmarillion, Unfinished Tales of Numenor and Middle-earth, The History of Middle-earth, and The Nature of Middle-earth but has some additional art done to supplement the text.
+
+**DUNE**
+
+**https://www.aftrmrktstore.com/**
