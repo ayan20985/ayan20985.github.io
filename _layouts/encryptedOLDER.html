@@ -1,0 +1,237 @@
+---
+layout: post
+---
+
+<style>
+  /* Define CSS rules for the error container and input box */
+  #error_container {
+    background-color: red; /* Set the background color to red */
+    color: white; /* Set text color to white */
+    padding: 12px; /* Increase padding slightly for the error container */
+    /* Remove box shadow and rounded corners */
+    box-shadow: none;
+    border-radius: 0;
+    /* Margin-top to push content down slightly */
+    margin-top: 80px; /* Adjust margin-top for more space */
+    /* Position containers absolutely */
+    position: absolute;
+    /* Align containers below the header */
+    top: 0; /* Align at the top of the page */
+    left: 0;
+    width: 100%; /* Set width to 100% for full-width overlay */
+    /* Initial opacity set to 0 (hidden) */
+    opacity: 0;
+    /* Transition for smooth fade-in/out */
+    transition: opacity 0.5s ease;
+    /* Z-index to position them above content */
+    z-index: 1;
+  }
+
+  /* Define CSS rules for the success container */
+  #success_container {
+    background-color: green; /* Set the background color to green */
+    color: white; /* Set text color to white */
+    padding: 12px; /* Increase padding slightly for the success container */
+    /* Remove box shadow and rounded corners */
+    box-shadow: none;
+    border-radius: 0;
+    /* Margin-top to push content down slightly */
+    margin-top: 80px; /* Adjust margin-top for more space */
+    /* Position containers absolutely */
+    position: absolute;
+    /* Align containers below the header */
+    top: 0; /* Align at the top of the page */
+    left: 0;
+    width: 100%; /* Set width to 100% for full-width overlay */
+    /* Initial opacity set to 0 (hidden) */
+    opacity: 0;
+    /* Transition for smooth fade-in/out */
+    transition: opacity 0.5s ease;
+    /* Z-index to position them above content */
+    z-index: 1;
+  }
+
+  /* Style for the close icon */
+  .close-icon {
+    float: right;
+    cursor: pointer;
+    font-size: 36px; /* Increase font size for the cross (close icon) to 36px */
+    padding: 0; /* Remove padding around the icon */
+    margin-right: 10px; /* Add margin to separate the icon from the text */
+    margin-top: -10px; /* Adjust margin to vertically center the icon */
+  }
+
+  /* Style for the input box */
+  #encrypt_password {
+    width: 70%; /* Set the width to 70% of the container */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 5px; /* Add rounded corners to the input box */
+    margin-bottom: 10px; /* Add space below the input */
+    float: left; /* Float the input box to the left */
+    border: none; /* Remove any border */
+    outline: none; /* Remove the default outline */
+    /* Initial opacity set to 1 (visible) */
+    opacity: 1;
+    /* Transition for smooth fade-in/out */
+    transition: opacity 0.5s ease;
+  }
+
+  /* Style for the unlock button */
+  #unlock_button {
+    width: 28%; /* Set the width to 28% of the container */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 5px; /* Add rounded corners to the button */
+    float: left; /* Float the button to the left */
+    margin-left: 2%; /* Add a little space between the input and the button */
+    border: none; /* Remove any border */
+    outline: none; /* Remove the default outline */
+    /* Initial opacity set to 1 (visible) */
+    opacity: 1;
+    /* Transition for smooth fade-in/out */
+    transition: opacity 0.5s ease;
+  }
+
+  /* Style for the decrypted content */
+  #decrypted_content {
+    /* Initial opacity set to 0 (hidden) */
+    opacity: 0;
+    /* Transition for smooth fade-in/out */
+    transition: opacity 0.5s ease;
+  }
+
+  /* Clear the float to prevent layout issues */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+</style>
+
+<div id="encrypted_content">
+  <form id="encrypt_form" action="#" method="post" class="clearfix"> <!-- Add clearfix class -->
+    <input id="encrypt_password"
+           type="password"
+           name="password"
+           placeholder="Enter password"
+           autofocus />
+    <input id="unlock_button" type="submit" value="Unlock"/> <!-- Move the button to the right -->
+
+  </form>
+
+  <!-- Create a div for the error message with white background -->
+  <div id="error_container">
+    <span id="error_message">Wrong Password! (x<span id="error_count">0</span>)</span>
+    <span class="close-icon" id="close_error_message">×</span>
+  </div>
+
+  <!-- Create a div for the success message with white background -->
+  <div id="success_container">
+    <span id="success_message">Correct Password! Decrypting Content...</span>
+    <span class="close-icon" id="close_success_message">×</span>
+  </div>
+
+  <!-- Create a div for the decrypted content -->
+  <div id="decrypted_content"></div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script>
+    // Variables to keep track of the number of incorrect passwords and message visibility
+    var incorrectPasswordCount = 0;
+    var errorContainerVisible = false;
+    var successContainerVisible = false;
+    var successTimeout;
+
+    // Function to close the error message
+    function closeErrorMessage() {
+      document.getElementById('error_container').style.opacity = 0;
+      errorContainerVisible = false;
+    }
+
+    // Function to close the success message
+    function closeSuccessMessage() {
+      document.getElementById('success_container').style.opacity = 0;
+      successContainerVisible = false;
+    }
+
+    // Event listener for the close icon of the error message
+    document.getElementById('close_error_message').addEventListener('click', function() {
+      if (incorrectPasswordCount > 0) {
+        incorrectPasswordCount--; // Decrease the incorrect password count
+        updateErrorMessage();
+      }
+      if (incorrectPasswordCount === 0) {
+        closeErrorMessage(); // Close the error message when count reaches 0
+      }
+    });
+
+    // Event listener for the close icon of the success message
+    document.getElementById('close_success_message').addEventListener('click', function() {
+      closeSuccessMessage();
+      clearTimeout(successTimeout); // Clear the success message timeout
+    });
+
+    // Function to update the error message with the count of incorrect passwords
+    function updateErrorMessage() {
+      document.getElementById('error_count').textContent = incorrectPasswordCount;
+      document.getElementById('error_message').textContent = `Wrong Password! (x${incorrectPasswordCount})`;
+    }
+
+    // Function to hide both error and success messages
+    function hideMessages() {
+      if (errorContainerVisible) {
+        closeErrorMessage();
+        // Don't reset the incorrect password count here
+        updateErrorMessage();
+      }
+      if (successContainerVisible) {
+        closeSuccessMessage();
+        clearTimeout(successTimeout); // Clear the success message timeout
+      }
+    }
+
+    // Event listener for the form submission
+    document.getElementById('encrypt_form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var passphrase = document.getElementById('encrypt_password').value,
+          encryptedMsg = '{{ page.encrypted }}',
+          encryptedHMAC = encryptedMsg.substring(0, 64),
+          encryptedHTML = encryptedMsg.substring(64),
+          decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
+
+      if (decryptedHMAC !== encryptedHMAC) {
+        // Increment the incorrect password count
+        incorrectPasswordCount++;
+        updateErrorMessage();
+
+        // Show the error container by setting opacity to 1 (fade in)
+        document.getElementById('error_container').style.opacity = 1;
+        errorContainerVisible = true;
+      } else {
+        // Password is correct, hide the error container by setting opacity to 0 (fade out)
+        closeErrorMessage();
+
+        // Show the success container with the success message
+        document.getElementById('success_message').textContent = 'Correct Password! Decrypting Content...';
+        document.getElementById('success_container').style.opacity = 1;
+        successContainerVisible = true;
+
+        // Wait for 2.15 seconds before displaying the decrypted content
+        setTimeout(function() {
+          var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
+          document.getElementById('decrypted_content').innerHTML = plainHTML;
+          // Fade in the decrypted content
+          document.getElementById('decrypted_content').style.opacity = 1;
+        }, 2150); // Wait for 2.15 seconds
+      }
+
+      // Hide messages after 10 seconds
+      setTimeout(hideMessages, 10000);
+
+      // Set a timeout to hide the success message after 5 seconds
+      if (successContainerVisible) {
+        clearTimeout(successTimeout); // Clear any existing timeout
+        successTimeout = setTimeout(closeSuccessMessage, 5000);
+      }
+    });
+  </script>
+</div>
