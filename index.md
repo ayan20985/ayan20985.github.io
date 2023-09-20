@@ -3,8 +3,6 @@ layout: page
 paginate: true
 alt_title: "Ayan's Compendium of Assorted Ramblings"
 sub_title: "Ripping pages, welding joints, experimenting experimentally, burning electronics, and tuning PIDs since 2007."
-image:
-  path: /assets/images/dystopian 1.png
 ---
 
 <style>
@@ -15,7 +13,6 @@ image:
     margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
   }
 
-  /* Style for hyperlinks in the content container */
   #content_container a {
     color: #283741; /* Change the color of hyperlinks */
     text-decoration: underline; /* Add underline to hyperlinks */
@@ -23,7 +20,7 @@ image:
 </style>
 
 <div id="content_container">
-  Are you admissions staff? Please click <a href="/admissions/">here</a> to be directed to additional documents that you may find useful.
+  Admissions staff? Please click <a href="/admissions/">here</a> to be directed to additional documents that you may find useful.
 </div>
 
 - Learn more about me in my <a href="/about/">about</a> section

@@ -15,7 +15,6 @@ Another cool game that teaches computer architecture in a fun way through puzzle
 - **[Nand2Tetris.org](https://www.nand2tetris.org/)**  
 Offers a course that allows you to build a 16-bit complete general purpose computer from the logic gates up using HDL in part 1, and part 2 teaches you on creating your own compiler assembler and creating some programs on it. The course is offered for free on [coursera.org](https://www.coursera.org/).
 
-
 # Site Documentation
 Site documentation is availible [here]({{ site.url }}{{ site.baseurl }}\projects\2023-06-28-website-deployment).
 
@@ -114,6 +113,6 @@ If you would like the entire history of the all of Middle Earth read the followi
 
 Some last notes to make would be that The Silmarillion was quite a challenging read for me so I listened to it as an audiobook while following the text in a physical copy of the book. It should also be noted that The Fall of Numenor (2022) was recently released, it contains the same text as the books The Silmarillion, Unfinished Tales of Numenor and Middle-earth, The History of Middle-earth, and The Nature of Middle-earth but has some additional art done to supplement the text.
 
-**DUNE**
+**The Entire DUNE Series**
 
 **https://www.aftrmrktstore.com/**
