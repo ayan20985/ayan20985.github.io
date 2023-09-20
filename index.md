@@ -3,6 +3,8 @@ layout: page
 paginate: true
 alt_title: "Ayan's Compendium of Assorted Ramblings"
 sub_title: "Ripping pages, welding joints, experimenting experimentally, burning electronics, and tuning PIDs since 2007."
+image:
+  path: /assets/images/dystopian 1.png
 ---
 
 <style>
