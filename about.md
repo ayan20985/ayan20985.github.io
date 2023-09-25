@@ -19,7 +19,7 @@ Hello! My name is Ayan Ali; I am a Year 13 student currently studying A-levels. 
 - Deployed my own CSS+HTML+JS based website. With in-progress ray-traced effects for coolness factor.
 - Designed, manufactured, and tested my own solar-powered water desalination device for regions with polluted water. (Produced a paper of ~7500 words outlining the process of research, construction, usage, etc.)
 
-- Produced a 12000 word research paper on perpetual solar flight as part of my EPQ. (with perhaps publishing an extended 25000-35000 word paper).
+- Produced a 17000 word research paper on perpetual solar flight as part of my EPQ. (with perhaps publishing an extended 25000-35000 word paper).
 - Completed AS-levels in Summer 2023.
 
 <!-- # Completed Examinations
@@ -36,12 +36,18 @@ Hello! My name is Ayan Ali; I am a Year 13 student currently studying A-levels. 
 
 - General SAT
 - AP Physics 1
+- IELTS
+
+- [9709] Cambridge IAL-AS Mathematics
+- [9231] Cambridge IAL-AS Further Mathematics
+- [9702] Cambridge IAL-AS Physics
+- [9618] Cambridge IAL-AS Computer Science
 
 # Current Examinations
-- [9709] Cambridge IAL Mathematics
-- [9231] Cambridge IAL Further Mathematics
-- [9702] Cambridge IAL Physics
-- [9618] Cambridge IAL Computer Science
+- [9709] Cambridge IAL-A2 Mathematics
+- [9231] Cambridge IAL-A2 Further Mathematics
+- [9702] Cambridge IAL-A2 Physics
+- [9618] Cambridge IAL-A2 Computer Science
 - [xxxx] Edexcel EPQ
 
 - AP Physics C Mechanics
