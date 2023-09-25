@@ -12,12 +12,16 @@ sub_title: "Ripping pages, welding joints, experimenting experimentally, burning
     padding: 20px; /* Add padding to the container */
     margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
   }
-
+  
   #content_container a {
     color: #283741; /* Change the color of hyperlinks */
     text-decoration: underline; /* Add underline to hyperlinks */
   }
 </style>
+
+<div id="content_container">
+  This website is still under construction, while most of the structure and programming is complete content still remains.
+</div>
 
 <div id="content_container">
   Admissions staff? Please click <a href="/admissions/">here</a> to be directed to additional documents that you may find useful.
