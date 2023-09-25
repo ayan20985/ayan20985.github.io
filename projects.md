@@ -7,9 +7,9 @@ collection: projects
 entries_layout: grid
 carousels:
   - images:
+    - image: /assets/projects/IMG_7892.JPG
     - image: /assets/projects/IMG_7666.JPG
     - image: /assets/projects/IMG_6009.JPG
-    - image: /assets/projects/IMG_7892.JPG
     - image: /assets/projects/IMG-7898.png
     - image: /assets/projects/65Assembly.JPG
     - image: /assets/projects/Drawing (1).PNG
