@@ -1,7 +1,7 @@
 ---
 title: 3D Modelling Exercises
 layout: page
-permalink: /3D-exercises/
+permalink: /3d-exercises/
 ---
 ![logos]({{ site.url }}{{ site.baseurl }}\assets\images\logos.png){: .align-center}
 
