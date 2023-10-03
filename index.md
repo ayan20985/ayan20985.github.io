@@ -24,6 +24,10 @@ sub_title: "Ripping pages, welding joints, experimenting experimentally, burning
 </div>
 
 <div id="content_container">
+  Have you been assigned 3D modelling homework? Please click <a href="/3d-exercises/">here</a> to be directed to exercises, the exercise number is mentioned in the bottom right corner of each technical drawing.
+</div>
+
+<div id="content_container">
   Admissions staff? Please click <a href="/admissions/">here</a> to be directed to additional documents that you may find useful.
 </div>
 
