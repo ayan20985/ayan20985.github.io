@@ -2,7 +2,7 @@
 layout: page
 paginate: true
 alt_title: "Ayan's Compendium of Assorted Ramblings"
-sub_title: "Ripping pages, welding joints, experimenting empirically, burning electronics, and tuning PIDs since 2007."
+sub_title: "Ripping pages, welding joints, experimenting empirically, burning electronics, and tuning PIDs."
 ---
 
 <style>
