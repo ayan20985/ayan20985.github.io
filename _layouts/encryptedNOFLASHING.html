@@ -1,7 +1,6 @@
 ---
 layout: post
 ---
-
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/maps 1 cropped.png" alt="logo" class="align-center" style="margin-bottom: 10px;">
 
 <style>
@@ -10,8 +9,6 @@ layout: post
     background-color: #283741; /* Set the background color */
     border-radius: 10px; /* Add rounded corners to the container */
     padding: 20px; /* Add padding to the container */
-    position: relative; /* Make it a relative container */
-    z-index: 1; /* Ensure it has a higher z-index */
   }
 
   /* Style for the input box */
@@ -20,6 +17,7 @@ layout: post
     padding: 10px; /* Add padding for spacing */
     border-radius: 5px; /* Add rounded corners to the input box */
     margin-bottom: 10px; /* Add space below the input */
+    float: left; /* Float the input box to the left */
     border: none; /* Remove any border */
     outline: none; /* Remove the default outline */
     transition: background-color 0.5s ease, opacity 0.5s ease; /* Add transitions for smooth changes */
@@ -30,53 +28,11 @@ layout: post
     width: 28%; /* Set the width to 28% of the container */
     padding: 10px; /* Add padding for spacing */
     border-radius: 5px; /* Add rounded corners to the button */
+    float: left; /* Float the button to the left */
+    margin-left: 2%; /* Add a little space between the input and the button */
     border: none; /* Remove any border */
     outline: none; /* Remove the default outline */
     transition: opacity 0.5s ease; /* Add a transition for smooth fade-in/out */
-  }
-
-  /* Define CSS for the error message box */
-  #error_message {
-    background-color: #FF8282;
-    border-radius: 5px;
-    padding: 20px; /* Increase the padding */
-    color: #000;
-    text-align: left; /* Align text to the left */
-    display: none; /* Initially hidden */
-    animation: breathing 2s infinite; /* Apply the breathing animation */
-    position: absolute; /* Make it absolutely positioned */
-    top: 50%; /* Position it at the vertical center */
-    left: 50%; /* Position it at the horizontal center */
-    transform: translate(-50%, -50%); /* Center it exactly */
-    z-index: 2; /* Ensure it has a higher z-index than the main content */
-  }
-
-  @keyframes breathing {
-    0% {
-      background-color: #FF8282; /* Start with red */
-    }
-    50% {
-      background-color: #ffc524; /* Transition to yellow at 50% */
-    }
-    100% {
-      background-color: #FF8282; /* Return to red at 100% */
-    }
-  }
-
-  /* Style for the error message text */
-  #error_text {
-    display: inline-block; /* Display the text inline */
-    width: 80%; /* Adjust the width to your preference */
-  }
-
-  /* Style for the close button */
-  #close_button {
-    display: inline-block; /* Display the close button inline */
-    font-size: 48px; /* Increase the font size of the close button */
-    cursor: pointer; /* Add a pointer cursor for hover effect */
-    position: absolute; /* Make it absolutely positioned */
-    top: 10px; /* Adjust the top position for vertical centering */
-    right: 25px; /* Adjust the right position for padding from the edge */
   }
 
   /* Clear the float to prevent layout issues */
@@ -89,10 +45,6 @@ layout: post
 
 <div id="content_container">
   <p>This content is password protected. Please enter the password to view it.</p>
-  <div id="error_message" style="display: none;">
-    <span id="close_button" onclick="closeErrorBox()">&times;</span> <!-- Close button -->
-    <span id="error_text">Password is in the first line of Common App Additional Information Section.</span>
-  </div>
   <form id="encrypt_form" action="#" method="post" class="clearfix" style="margin-top: 20px;"> <!-- Add margin-top for spacing -->
     <input id="encrypt_password"
            type="password"
@@ -105,9 +57,6 @@ layout: post
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
 <script>
-  var errorMessageBox = document.getElementById('error_message');
-  var flashingInterval; // Declare flashingInterval outside of the functions
-
   document.getElementById('encrypt_form').addEventListener('submit', function(e) {
     e.preventDefault();
     var passphrase = document.getElementById('encrypt_password').value,
@@ -117,19 +66,13 @@ layout: post
         decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
     if (decryptedHMAC !== encryptedHMAC) {
-      // Display the error message and start the flash effect
-      flashErrorMessage();
-
       // Change the background color of the input box to indicate an incorrect password
-      document.getElementById('encrypt_password').style.backgroundColor = '#FFFFFF';
+      document.getElementById('encrypt_password').style.backgroundColor = '#FF8282';
       // Set a timer to revert the background color back to its original state after 1 second
       setTimeout(function() {
         document.getElementById('encrypt_password').style.backgroundColor = '';
       }, 1000);
     } else {
-      // Reset error state and hide the error message
-      errorMessageBox.style.display = 'none';
-
       // Change the background color of the input box to green to indicate a correct password immediately
       document.getElementById('encrypt_password').style.backgroundColor = '#82FF82';
       // Hide the input box and unlock button with a fade-out effect
@@ -147,20 +90,4 @@ layout: post
       }, 500); // Delay before displaying the content (adjust as needed)
     }
   });
-
-  // Function to flash the error message
-  function flashErrorMessage() {
-    errorMessageBox.style.display = 'block'; // Display the error message
-    var count = 0;
-    flashingInterval = setInterval(function() {
-      errorMessageBox.style.backgroundColor = count % 2 === 0 ? '#FF8282' : '#ffc524';
-      count++;
-    }, 500); // Flash every 500 milliseconds (adjust as needed)
-  }
-
-  // Function to close the error message box
-  function closeErrorBox() {
-    errorMessageBox.style.display = 'none'; // Hide the error message
-    clearInterval(flashingInterval); // Stop the flashing
-  }
 </script>
