@@ -15,7 +15,34 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
     background-attachment: fixed; /* Optional, for a fixed background */
   }
   
+  .content-container-breathing {
+    border-radius: 10px; /* Add rounded corners to the container */
+    padding: 20px; /* Add padding to the container */
+    margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, for a fixed background */
+    animation: breathing 2s infinite; /* Apply the breathing animation */
+  }
+
+  @keyframes breathing {
+    0% {
+      background-color: #5D676E; /* Start with red */
+    }
+    50% {
+      background-color: #51454C; /* Transition to yellow at 50% */
+    }
+    100% {
+      background-color: #5D676E; /* Return to red at 100% */
+    }
+  }
+  
   .content-container a {
+    color: #D37070; /* Change the color of hyperlinks */
+    text-decoration: underline; /* Add underline to hyperlinks */
+  }
+
+  .content-container b {
     color: #D37070; /* Change the color of hyperlinks */
     text-decoration: underline; /* Add underline to hyperlinks */
   }
@@ -24,12 +51,12 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
   This website is still under construction, while most of the structure and programming is complete content still remains.
 </div>
 
-<div class="content-container" data-bg-image="assets/images/chevron2.png">
+<div class="content-container-breathing">
   Admissions staff? Please click <a href="/admissions/">here</a> to be directed to additional documents that you may find useful.
 </div>
 
 <div class="content-container" data-bg-image="assets/images/chevron2.png">
-  Have you been assigned 3D modeling homework? Please click <a href="/3d-exercises/">here</a> to be directed to exercises, the exercise number is mentioned in the bottom right corner of each technical drawing.
+  Have you been assigned 3D modeling homework? Please click <b href="/3d-exercises/">here</b> to be directed to exercises, the exercise number is mentioned in the bottom right corner of each technical drawing.
 </div>
 
 <div class="content-container" data-bg-image="assets/images/chevron2.png">
