@@ -57,7 +57,7 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
     overflow: hidden; /* Hide the overflow content */
     white-space: nowrap; /* Prevent text from wrapping */
     width: 100%; /* Set the width to 100% to span the body */
-    font-size: 24px;
+    font-size: 17px;
   }
 
   .scroll-text {
