@@ -1,3 +1,4 @@
 ---
-layout: encrypted
+layout: post
 ---
+The cake is a lie.

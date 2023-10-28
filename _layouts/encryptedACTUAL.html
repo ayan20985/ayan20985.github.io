@@ -1,0 +1,114 @@
+---
+layout: post
+---
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/maps 1 cropped.png" alt="logo" class="align-center" style="margin-bottom: 10px;">
+
+<style>
+  /* Define CSS rules for the outer container */
+  #content_container {
+    background-color: #283741; /* Set the background color */
+    border-radius: 10px; /* Add rounded corners to the container */
+    padding: 20px; /* Add padding to the container */
+  }
+
+  /* Style for the input box */
+  #encrypt_password {
+    width: 70%; /* Set the width to 70% of the container */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 5px; /* Add rounded corners to the input box */
+    margin-bottom: 10px; /* Add space below the input */
+    float: left; /* Float the input box to the left */
+    border: none; /* Remove any border */
+    outline: none; /* Remove the default outline */
+    transition: background-color 0.5s ease, opacity 0.5s ease; /* Add transitions for smooth changes */
+  }
+
+  /* Style for the unlock button */
+  #unlock_button {
+    width: 28%; /* Set the width to 28% of the container */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 5px; /* Add rounded corners to the button */
+    float: left; /* Float the button to the left */
+    margin-left: 2%; /* Add a little space between the input and the button */
+    border: none; /* Remove any border */
+    outline: none; /* Remove the default outline */
+    transition: opacity 0.5s ease; /* Add a transition for smooth fade-in/out */
+  }
+
+  /* Clear the float to prevent layout issues */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .content-container {
+    border-radius: 10px; /* Add rounded corners to the container */
+    padding: 20px; /* Add padding to the container */
+    margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
+    animation: breathing 2s infinite; /* Apply the breathing animation */
+  }
+
+  @keyframes breathing {
+    0% {
+      background-color: #5D676E; /* Start with red */
+    }
+    50% {
+      background-color: #51454C; /* Transition to yellow at 50% */
+    }
+    100% {
+      background-color: #5D676E; /* Return to red at 100% */
+    }
+  }
+</style>
+
+<div id="content_container">
+  <div class="content-container">
+    Password is the bold section of Common App Additional Information Section.
+  </div>
+  <form id="encrypt_form" action="#" method="post" class="clearfix" style="margin-top: 20px;"> <!-- Add margin-top for spacing -->
+    <input id="encrypt_password"
+           type="password"
+           name="password"
+           placeholder="Enter password"
+           autofocus />
+    <input id="unlock_button" type="submit" value="Unlock"/> <!-- Move the button to the right -->
+  </form>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+<script>
+  document.getElementById('encrypt_form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var passphrase = document.getElementById('encrypt_password').value,
+        encryptedMsg = '{{ page.encrypted }}',
+        encryptedHMAC = encryptedMsg.substring(0, 64),
+        encryptedHTML = encryptedMsg.substring(64),
+        decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
+
+    if (decryptedHMAC !== encryptedHMAC) {
+      // Change the background color of the input box to indicate an incorrect password
+      document.getElementById('encrypt_password').style.backgroundColor = '#FF8282';
+      // Set a timer to revert the background color back to its original state after 1 second
+      setTimeout(function() {
+        document.getElementById('encrypt_password').style.backgroundColor = '';
+      }, 1000);
+    } else {
+      // Change the background color of the input box to green to indicate a correct password immediately
+      document.getElementById('encrypt_password').style.backgroundColor = '#82FF82';
+      // Hide the input box and unlock button with a fade-out effect
+      document.getElementById('encrypt_password').style.opacity = 0;
+      document.getElementById('unlock_button').style.opacity = 0;
+
+      // Use setTimeout to display the decrypted content after a delay
+      setTimeout(function() {
+        // Display the decrypted content
+        var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
+        document.getElementById('content_container').innerHTML = plainHTML;
+
+        // Add a fade-in effect to the decrypted content
+        document.getElementById('content_container').style.opacity = 1;
+      }, 500); // Delay before displaying the content (adjust as needed)
+    }
+  });
+</script>
