@@ -102,7 +102,7 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
     <li>Learn more about me in my <a href="/about/">about</a> section</li>
     <li>Discussions of niche topics and ramblings of things I&#39;ve learned in the <a href="/blog/">blog</a></li>
     <li>Various <a href="/projects/">projects</a> of projects that are complete and in-progress</li>
-    <li>A 3D-Modeling course that has been deployed to 11 schools or ~3100 eligible students, and my EPQ in <a href="/research/">research</a></li>
+    <li>A 3D-Modeling course that has been deployed to 11 schools or ~2500 eligible students, and my EPQ in <a href="/research/">research</a></li>
     <li>Various 3D-art that I created in the <a href="/artwork/">artwork</a> section</li>
     <li>Resources, site documentation, and my reading list available at <a href="/miscellaneous/">miscellaneous</a></li>
   </ul>

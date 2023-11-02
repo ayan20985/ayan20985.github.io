@@ -1,6 +1,6 @@
 ---
 title: "Miscellaneous"
-sub_title: "Below are resources I find usefull, site documentation, and my reading list."
+sub_title: "Below are resources I find useful, site documentation, and my reading list. Items below have been explicitly read/used by me."
 layout: page
 permalink: /miscellaneous/
 ---

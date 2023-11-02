@@ -81,45 +81,19 @@ layout: post
   document.getElementById('encrypt_form').addEventListener('submit', function(e) {
     e.preventDefault();
     var passphrase = document.getElementById('encrypt_password').value,
-        encryptedMsgs = [
-          '{{ page.encrypted1 }}',
-          '{{ page.encrypted2 }}',
-          '{{ page.encrypted3 }}',
-          '{{ page.encrypted4 }}',
-          '{{ page.encrypted5 }}',
-          '{{ page.encrypted6 }}',
-          '{{ page.encrypted7 }}',
-          '{{ page.encrypted8 }}',
-          '{{ page.encrypted9 }}',
-          '{{ page.encrypted10 }}',
-          '{{ page.encrypted11 }}',
-          '{{ page.encrypted12 }}',
-          '{{ page.encrypted13 }}',
-          '{{ page.encrypted14 }}',
-          '{{ page.encrypted15 }}',
-          '{{ page.encrypted16 }}',
-          '{{ page.encrypted17 }}',
-          '{{ page.encrypted18 }}',
-          '{{ page.encrypted19 }}',
-          '{{ page.encrypted20 }}',
-        ];
+        encryptedMsg = '{{ page.encrypted }}',
+        encryptedHMAC = encryptedMsg.substring(0, 64),
+        encryptedHTML = encryptedMsg.substring(64),
+        decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
-    var decryptedHTML = null;
-
-    for (var i = 0; i < encryptedMsgs.length; i++) {
-      var encryptedMsg = encryptedMsgs[i];
-      var encryptedHMAC = encryptedMsg.substring(0, 64);
-      var encryptedHTML = encryptedMsg.substring(64);
-      var decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
-
-      if (decryptedHMAC === encryptedHMAC) {
-        // Password matched, decrypt and display the content
-        decryptedHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
-        break;
-      }
-    }
-
-    if (decryptedHTML) {
+    if (decryptedHMAC !== encryptedHMAC) {
+      // Change the background color of the input box to indicate an incorrect password
+      document.getElementById('encrypt_password').style.backgroundColor = '#FF8282';
+      // Set a timer to revert the background color back to its original state after 1 second
+      setTimeout(function() {
+        document.getElementById('encrypt_password').style.backgroundColor = '';
+      }, 1000);
+    } else {
       // Change the background color of the input box to green to indicate a correct password immediately
       document.getElementById('encrypt_password').style.backgroundColor = '#82FF82';
       // Hide the input box and unlock button with a fade-out effect
@@ -129,18 +103,12 @@ layout: post
       // Use setTimeout to display the decrypted content after a delay
       setTimeout(function() {
         // Display the decrypted content
-        document.getElementById('content_container').innerHTML = decryptedHTML;
+        var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
+        document.getElementById('content_container').innerHTML = plainHTML;
 
         // Add a fade-in effect to the decrypted content
         document.getElementById('content_container').style.opacity = 1;
       }, 500); // Delay before displaying the content (adjust as needed)
-    } else {
-      // Change the background color of the input box to indicate an incorrect password
-      document.getElementById('encrypt_password').style.backgroundColor = '#FF8282';
-      // Set a timer to revert the background color back to its original state after 1 second
-      setTimeout(function() {
-        document.getElementById('encrypt_password').style.backgroundColor = '';
-      }, 1000);
     }
   });
 </script>
