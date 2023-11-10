@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>File Browser</title>
-    <style>
-        /* Structure of page front matter as follow:
+---
+layout: page
+---
+<style>
+    /* Structure of page front matter as follow:
         ---
         layout: file-browser
         title: File Browser
@@ -11,64 +10,59 @@
         permalink: /files/
         ---
         Below are some of the files I have created.
-        */
+    */
+</style>
+<style>
+    /* Define the colors using CSS variables */
+    :root {
+        --folder-background-dark: #283741;
+        --folder-background-light: #212e36;
+    }
 
-        /* Define the colors using CSS variables */
-        :root {
-            --folder-background-dark: #283741;
-            --folder-background-light: #212e36;
-        }
+    .download-button {
+        float: right;
+    }
 
-        .download-button {
-            display: block; /* Change from float to block display */
-            margin-top: 5px; /* Add a top margin for spacing */
-        }
+    ul {
+        list-style: none; /* Remove bullet points */
+        padding-left: 20px; /* Add left indentation to match bullet points */
+    }
 
-        ul {
-            list-style: none; /* Remove bullet points */
-            padding-left: 20px; /* Add left indentation to match bullet points */
-        }
+    ul ul {
+        padding-left: 20px; /* Add additional indentation for subfolders */
+    }
 
-        ul ul {
-            padding-left: 20px; /* Add additional indentation for subfolders */
-        }
+    .folder-container {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px; /* Add rounded corners to the container */
+    }
 
-        .folder-container {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 10px; /* Add rounded corners to the container */
-        }
+    .folder-container .folder-container {
+        border-radius: 10px; /* Add rounded corners to the nested container */
+    }
 
-        .folder-container .folder-container {
-            border-radius: 10px; /* Add rounded corners to the nested container */
-        }
+    /* Preview container styles */
+    .preview-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px; /* Adjust the width as needed */
+        height: 100%;
+        background-color: white;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow on the left side */
+        overflow: auto;
+        display: none;
+    }
 
-        /* Preview container styles */
-        .preview-container {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 300px; /* Adjust the width as needed */
-            height: 100%;
-            background-color: white;
-            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow on the left side */
-            overflow: auto;
-            display: none;
-        }
+    /* Image preview styles */
+    .preview-image {
+        max-width: 100%;
+        max-height: 50vh; /* Set maximum height to 25% of the viewport height */
+        border-radius: 20px;
+    }
+</style>
 
-        /* Image preview styles */
-        .preview-image {
-            max-width: 100%;
-            max-height: 50vh; /* Set maximum height to 25% of the viewport height */
-            border-radius: 20px;
-        }
-    </style>
-</head>
-<body>
-<div id="file-list"></div>
-<div id="image-preview-container" class="preview-container">
-    <img id="image-preview" class="preview-image" alt="Image Preview" />
-</div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Function to create a dropdown menu for a folder and its subfolders or image files.
@@ -108,7 +102,6 @@
                             } else if (!entry.includes('?') && (entry.endsWith('.jpg') || entry.endsWith('.png') || entry.endsWith('.gif'))) {
                                 // This is an image file, add it to the current dropdown.
                                 const listItem = document.createElement('li');
-                                listItem.classList.add('file-list-item'); // Add the CSS class
                                 const fileName = decodedEntry.split('/').pop(); // Get just the filename
                                 listItem.innerHTML = `
                                     <details>
@@ -132,7 +125,7 @@
         }
 
         // Define the directory path you want to list files from.
-        const directoryPath = '/assets/';
+        const directoryPath = '{{ page.directory_path | default: "/assets/" }}';
 
         // Get a reference to the element where you want to display the file list.
         const fileList = document.getElementById('file-list');
@@ -141,5 +134,8 @@
         createFolderDropdown("Root", directoryPath, fileList, 0); // Start with depth 0
     });
 </script>
-</body>
-</html>
+
+<div id="file-list"></div>
+<div id="image-preview-container" class="preview-container">
+    <img id="image-preview" class="preview-image" alt="Image Preview" />
+</div>

@@ -6,5 +6,5 @@
 </style>
 
 <body>
-Further documentation available <a href="hidden for now">here.</a>
+Further documentation available <a href="https://drive.google.com/drive/folders/1c0RDYSpBO2YEyObhCw_Dnd42wcLdhmQL?usp=sharing">here</a>.
 </body>

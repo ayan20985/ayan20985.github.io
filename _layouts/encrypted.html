@@ -104,43 +104,43 @@ layout: post
           '{{ page.encrypted20 }}',
         ];
 
-    var decryptedHTML = null;
+        var decryptedHTML = null;
 
-    for (var i = 0; i < encryptedMsgs.length; i++) {
-      var encryptedMsg = encryptedMsgs[i];
-      var encryptedHMAC = encryptedMsg.substring(0, 64);
-      var encryptedHTML = encryptedMsg.substring(64);
-      var decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
+        for (var i = 0; i < encryptedMsgs.length; i++) {
+          var encryptedMsg = encryptedMsgs[i];
+          var encryptedHMAC = encryptedMsg.substring(0, 64);
+          var encryptedHTML = encryptedMsg.substring(64);
+          var decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
-      if (decryptedHMAC === encryptedHMAC) {
-        // Password matched, decrypt and display the content
-        decryptedHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
-        break;
-      }
-    }
+          if (decryptedHMAC === encryptedHMAC) {
+            // Password matched, decrypt and display the content
+            decryptedHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
+            break;
+          }
+        }
 
-    if (decryptedHTML) {
-      // Change the background color of the input box to green to indicate a correct password immediately
-      document.getElementById('encrypt_password').style.backgroundColor = '#82FF82';
-      // Hide the input box and unlock button with a fade-out effect
-      document.getElementById('encrypt_password').style.opacity = 0;
-      document.getElementById('unlock_button').style.opacity = 0;
+        if (decryptedHTML) {
+          // Change the background color of the input box to green to indicate a correct password immediately
+          document.getElementById('encrypt_password').style.backgroundColor = '#82FF82';
+          // Hide the input box and unlock button with a fade-out effect
+          document.getElementById('encrypt_password').style.opacity = 0;
+          document.getElementById('unlock_button').style.opacity = 0;
 
-      // Use setTimeout to display the decrypted content after a delay
-      setTimeout(function() {
-        // Display the decrypted content
-        document.getElementById('content_container').innerHTML = decryptedHTML;
+          // Use setTimeout to display the decrypted content after a delay
+          setTimeout(function() {
+            // Display the decrypted content
+            document.getElementById('content_container').innerHTML = decryptedHTML;
 
-        // Add a fade-in effect to the decrypted content
-        document.getElementById('content_container').style.opacity = 1;
-      }, 500); // Delay before displaying the content (adjust as needed)
-    } else {
-      // Change the background color of the input box to indicate an incorrect password
-      document.getElementById('encrypt_password').style.backgroundColor = '#FF8282';
-      // Set a timer to revert the background color back to its original state after 1 second
-      setTimeout(function() {
-        document.getElementById('encrypt_password').style.backgroundColor = '';
-      }, 1000);
-    }
-  });
+            // Add a fade-in effect to the decrypted content
+            document.getElementById('content_container').style.opacity = 1;
+          }, 500); // Delay before displaying the content (adjust as needed)
+        } else {
+          // Change the background color of the input box to indicate an incorrect password
+          document.getElementById('encrypt_password').style.backgroundColor = '#FF8282';
+          // Set a timer to revert the background color back to its original state after 1 second
+          setTimeout(function() {
+            document.getElementById('encrypt_password').style.backgroundColor = '';
+          }, 1000);
+        }
+        });
 </script>
