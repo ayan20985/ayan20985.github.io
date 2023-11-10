@@ -16,7 +16,7 @@ Another cool game that teaches computer architecture in a fun way through puzzle
 Offers a course that allows you to build a 16-bit complete general purpose computer from the logic gates up using HDL in part 1, and part 2 teaches you on creating your own compiler assembler and creating some programs on it. The course is offered for free on [coursera.org](https://www.coursera.org/).
 
 # Site Documentation
-Site documentation is availible [here]({{ site.url }}{{ site.baseurl }}\projects\2023-06-28-website-deployment).
+Site documentation is available [here]({{ site.url }}{{ site.baseurl }}\projects\2023-06-28-website-deployment).
 
 # Reading List
 ## Electronics, Physics, and Mathematics
@@ -55,11 +55,15 @@ Offers practical wisdom for a virtuous life, emphasizing control over emotions, 
 Structured as a set of personal notes, the emperors sayings are quite useful as insight into one's own way of living. While most sections of notes may not be applicable, some sections can help foster self-reflection in one's self.
 
 ## Existentialism and our History
-**Sapiens: A Brief History of Humankind by Yuval Noah Harari and Derek Perkins**  
+**Sapiens: A Brief History of Humankind by Yuval Noah Harari and Derek Perkins**   
 The book provides an overview of the history of Homo sapiens, the species to which modern humans belong. It presents a comprehensive and thought-provoking account of human history, from the emergence of Homo sapiens in Africa to the present day. Please read this before The Precipice as it really does give a "big-idea" style picture in your mind.
 
-**The Precipice: Existential Risk and the Future of Humanity by Toby Ord**  
-*"If all goes well, human history is just beginning. Our species could survive for billions of years - enough time to end disease, poverty, and injustice, and to flourish in ways unimaginable today."* While there are aspects that I do not agree with, it is a brilliant book by a brilliant author and definitely worth reading even if you disagree with what Toby Ord says as it really does get you thinking. I have also made a review in the blog [here]({{ site.url }}{{ site.baseurl }}\posts\2023-04-16-The-Precipice-Review)
+**Homo Deus by Yuval Noah Harari**  
+
+**21 Lessons for the 21st Century by Yuval Noah Harari**  
+
+**The Precipice: Existential Risk and the Future of Humanity by Toby Ord**
+*"If all goes well, human history is just beginning. Our species could survive for billions of years - enough time to end disease, poverty, and injustice, and to flourish in ways unimaginable today."* While there are aspects that I do not agree with, it is a brilliant book by a brilliant author and definitely worth reading even if you disagree with what Toby Ord says as it really does get you thinking. I have also made a review in the blog [here]({{ site.url }}{{ site.baseurl }}.\posts\2023-04-16-The-Precipice-Review)
 
 ## Mechanical Design
 **Build Your Own Metal Working Workshop From Scrap by David J. Gingery**  
