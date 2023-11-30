@@ -61,18 +61,18 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
   }
 
   .scroll-text {
-    animation: scroll 22.5s linear infinite; /* Adjust the animation duration as needed */
-    animation-delay: -50s; /* Reduce the delay to 3 seconds */
+    animation: scroll 30s linear infinite; /* Adjust the animation duration as needed */
+    animation-delay: 0s; /* Reduce the delay to 3 seconds */
     display: inline-block;
     font-family: 'Fira Code', sans-serif;
   }
 
   @keyframes scroll {
     0% {
-      transform: translateX(102.5%);
+      transform: translateX(25%);
     }
     100% {
-      transform: translateX(-102.5%); /* Adjust the distance for a smoother scroll */
+      transform: translateX(-100%); /* Adjust the distance for a smoother scroll */
     }
   }
 
@@ -89,7 +89,7 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
 
 <div class="content-container-scrolling scroll-container">
   <div class="scroll-text">
-    Latest updates: 10th November, more content added in password-protected section, use password to access! 1st November, the password-protected section has been updated with 128-bit encryption. 23rd Oct, Research section has a new-old project. 23rd Oct, New blog posts coming soon™. 18th Oct, Updated additional information section. Year -20985, Existence of ___ reported.
+    Latest updates: 10th November, more content added in password-protected section, use password to access! 1st November, the password-protected section has been updated with 128-bit encryption. 23rd Oct, Research section has a new-old project. 23rd Oct, New blog posts coming soon™. 18th Oct, Updated additional information section.
   </div>
 </div>
 
