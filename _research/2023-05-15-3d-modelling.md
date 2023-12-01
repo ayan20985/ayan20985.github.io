@@ -4,8 +4,6 @@ layout: page
 ---
 12 Chapters, 18 weeks of study, 11 schools, ~2500 eligible students, and Fusion 360. Designed to teach students from Grades 9 to 12 industry standard CAD practices that emphasize design thinking and modelling intuition. Skills learned can be transferred to programs outside of fusion 360. <!-- Plans to deploy to ~53 schools or ~15000 eligible students. --> Open-source and free forever.
 
-A brief history of solar flight with analysis of existing data; an explanation on the concepts leading to solar flight; narrowing existing technology to a feasible flight model; modeling through fluid simulation and power-metrics; and producing a possible prototype. Plans to extend paper and publish instead of just submitting as an EPQ.
-
 <style>
     .pdf-container {
     width: 100%;
