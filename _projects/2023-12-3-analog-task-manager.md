@@ -201,6 +201,7 @@ We have now proven it is possible to do this using the this pipeline. The struct
 analog task manager
 ├── OpenHardwareMonitorLib.dll      # available through their source code.
 ├── OpenHardwareMonitorLib.sys      # auto-produced
+├── sketch v0.0.ino                 # arduino sketch 
 └── ProgramMain v0.0.py             # feasibility analysis
 ```
 
