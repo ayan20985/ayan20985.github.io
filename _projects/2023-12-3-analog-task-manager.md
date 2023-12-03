@@ -93,27 +93,105 @@ Let's make a Analog task manager inspired that allows us to display the CPU core
     Suggestions? Want to discuss a certain aspect of my work? Please contact me at ayanali20985@gmail.com, use the direct email link in the bottom of the menu on the left, or create a Github pull request.
 </div>
 
-<div class="content-container-blue">
-    <div class="dropdown-header">
-        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
-            Analog Task Manager v0.0
+{% raw %}
+# Version v0.0
+This project is in inspired by <a href="https://www.youtube.com/watch?v=4J-DTbZlJ5I">this</a>.
 
-            
-    </div>
-    <div class="dropdown-header" class="dropdown-content">
-        This project is in inspired by <a href="https://www.youtube.com/watch?v=4J-DTbZlJ5I">this</a>.
-    </div>
-</div>
+To complete this project we have to do the following:
+1.  Software
+    1.  Create a script to read all relevant readings from from WMI (windows management instrumentation)
+    2.  Parse and process this data into a useful voltage value
+    3.  Send this processed data to an Arduino so that it can be used to control analog gauges. Also add basic code to add color changing lights.
+2.  Hardware
+    1. Take this data and send it properly to the relevant gauge using the digital PWM pins on the Arduino Mega2560.
+    2. Use digital I/O pins to control the RGB lights for each gauge so that it can be red/yellow/green for the status of the gauge.
+    3. Add in 2 toggle switches for ON/OFF for the reading on the gauge and the backlight on the gauge.
+    4. Add a variable resistor dimmer switch for each gauge backlight.
+3.  Nice-to-haves
+    1. Nice casing that is curved and matches the curve of your eyes just like a curved monitor does.
+    2. Make it sit low so it does not cover a large portion of desk space.
+    3. Make it modular so additional gauge clusters can be added without having to change the frame. Use magnets and contact connectors such as 4-pin headphone jacks to connect for power and data.
+    4. Perhaps make a program/software that can easily adapt to each system and allow the user to program what each gauge does.
+    5. Add a small LCD on the gauge to allow user to change the name of the purpose of each gauge easily and without fuss.
 
-<div class="content-container-blue">
-    <div class="dropdown-header">
-        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
-            Analog Task Manager v0.1
-    </div>
-    <div class="dropdown-header" class="dropdown-content">
-        Under-progress, to be deployed within the week.
-    </div>
-</div>
+First, let us prove the feasibility of such a project through a proof of concept.
+
+Let's first create script to take data from the WMI and print it out to console. I'm going to keep it simple and just use python as we do not need that much power. Be very careful with the installation of the clr library as we should use:
+```bash
+pip install pythonnet
+pip install pyserial
+```
+```python
+import clr  #IMPORTANT! pip install pythonnet, NOT pip install clr
+import serial
+import time
+
+c = Computer()
+c.CPUEnabled = True
+c.GPUEnabled = True
+c.Open()
+
+while True:
+    c.Hardware[1].Update()  # Update the hardware info
+    for sensor in c.Hardware[1].Sensors:
+        if sensor.SensorType == SensorType.Temperature and sensor.Value is not None:
+            temperature = sensor.Value
+            print("GPU Temp is:", temperature)
+            ser.write(f"{temperature}\n".encode())
+```
+Nice! Okay now lets update this code so that it sends it across to the Arduino on COM4 and baudrate 9600.
+```python
+import clr  #IMPORTANT! pip install pythonnet, NOT pip install clr
+import serial
+import time
+
+clr.AddReference('OpenHardwareMonitorLib')
+from OpenHardwareMonitor.Hardware import Computer, SensorType
+
+ser = serial.Serial('COM4', 9600, timeout=1)
+
+c = Computer()
+c.CPUEnabled = True
+c.GPUEnabled = True
+c.Open()
+
+while True:
+    c.Hardware[1].Update()  # Update the hardware info
+    for sensor in c.Hardware[1].Sensors:
+        if sensor.SensorType == SensorType.Temperature and sensor.Value is not None:
+            temperature = sensor.Value
+            print("GPU Temp is:", temperature)
+            ser.write(f"{temperature}\n".encode())
+```
+Okay now lets write some simple code to take this GPU temp reading and turn on the onboard LED if it exceed 51°C.
+```
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    float gpuTemperature = Serial.parseFloat();
+    if (gpuTemperature > 51.0) {
+      digitalWrite(LED_BUILTIN, HIGH);
+    } else {
+      digitalWrite(LED_BUILTIN, LOW);
+    }
+  }
+}
+```
+We have now proven it is possible to do this using the this pipeline. The structure of our software is as follows:
+```
+analog task manager
+├── OpenHardwareMonitorLib.dll      # available through their source code.
+├── OpenHardwareMonitorLib.sys      # auto-produced
+└── ProgramMain v0.0.py             # feasibility analysis
+```
+
+# Version v0.1
+Under-progress, to be deployed within the week.
+{% endraw %}
 
 <script>
     // Select all dropdown-header elements
@@ -146,5 +224,3 @@ Let's make a Analog task manager inspired that allows us to display the CPU core
         container.style.backgroundImage = `url(${bgImage})`;
     });
 </script>
-
-
