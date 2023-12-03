@@ -2,7 +2,7 @@
 title: "Analog Gauge-Based Task Manager"
 layout: page
 image:
-  thumbnail: /assets/projects/16-bit.png
+  thumbnail: /assets/projects/analog.png
 ---
 Let's make a Analog task manager inspired that allows us to display the CPU core loads, CPU core temperatures, CPU power consumption, GPU load, GPU temperature, GPU power consumption, and memory usage.
 
@@ -86,7 +86,7 @@ Let's make a Analog task manager inspired that allows us to display the CPU core
 </style>
 
 <div class="content-container" data-bg-image="/assets/images/chevron2.png">
-    This project is available as a Github Repository href="https://github.com/420Ayan420/analog-task-manager">here</a>.
+    This project is available as a Github Repository <a href="https://github.com/420Ayan420/analog-task-manager">here</a>.
 </div>
 
 <div class="content-container" data-bg-image="/assets/images/chevron2.png">
@@ -94,5 +94,37 @@ Let's make a Analog task manager inspired that allows us to display the CPU core
 </div>
 
 This project is in inspired by [this](https://www.youtube.com/watch?v=4J-DTbZlJ5I).
+
+<script>
+    // Select all dropdown-header elements
+    var dropdownHeaders = document.querySelectorAll(".dropdown-header");
+
+    // Add click event listener to each dropdown-header
+    dropdownHeaders.forEach(function(header) {
+        header.addEventListener("click", function() {
+            // Find the next sibling element which is the dropdown content
+            var content = this.nextElementSibling;
+            var icon = this.querySelector(".dropdown-icon");
+
+            // Toggle display and icon rotation
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.classList.remove("rotate-icon");
+            } else {
+                content.style.display = "block";
+                icon.classList.add("rotate-icon");
+            }
+        });
+    });
+
+    // Get all elements with the class "content-container"
+    const contentContainers = document.querySelectorAll(".content-container");
+
+    // Loop through the elements and set their background images
+    contentContainers.forEach(container => {
+        const bgImage = container.getAttribute("data-bg-image");
+        container.style.backgroundImage = `url(${bgImage})`;
+    });
+</script>
 
 
