@@ -88,8 +88,7 @@ layout: page
 
 <div class="content-container-blue">
     <div class="dropdown-header">
-        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
-        Final submission for NEA is as follows, scored full marks and Pearson-Edexcel OPLA highest in the middle east for this project.
+        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->      
     </div>
     <div class="dropdown-header" class="dropdown-content">
         <div class="pdf-container">
