@@ -89,7 +89,7 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
 
 <div class="content-container-scrolling scroll-container">
   <div class="scroll-text">
-    Latest updates: 3rd December, NEW PROJECT! Analog Task Manager, see ↯ Projects form me details. 10th November, more content added in password-protected section, use password to access! 1st November, the password-protected section has been updated with 128-bit encryption. 23rd Oct, Research section has a new-old project. 23rd Oct, New blog posts coming soon™. 18th Oct, Updated additional information section.
+    Latest updates: 3rd December, NEW PROJECT! Analog Task Manager, see ↯ Projects for more details. 10th November, more content added in password-protected section, use password to access! 1st November, the password-protected section has been updated with 128-bit encryption. 23rd Oct, Research section has a new-old project. 23rd Oct, New blog posts coming soon™. 18th Oct, Updated additional information section.
   </div>
 </div>
 
