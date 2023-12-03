@@ -163,7 +163,7 @@ while True:
             print("GPU Temp is:", temperature)
             ser.write(f"{temperature}\n".encode())
 ```
-Okay now lets write some simple code to take this GPU temp reading and turn on the onboard LED if it exceed 51°C.
+Okay now lets write some simple code to take this GPU temp reading and turn on the onboard LED if it exceeds 51°C.
 ```
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -181,6 +181,9 @@ void loop() {
   }
 }
 ```
+See the following video for a demonstration of this code, the top LED lights up when the temperature exceed 51°C.
+[<img src="https://www.youtube.com/shorts/XGVtSRLHYPk" width="600" height="300"
+/>](https://www.youtube.com/embed/<VIDEO_ID>)
 We have now proven it is possible to do this using the this pipeline. The structure of our software is as follows:
 ```
 analog task manager
