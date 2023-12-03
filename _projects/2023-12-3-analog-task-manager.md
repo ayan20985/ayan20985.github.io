@@ -93,7 +93,27 @@ Let's make a Analog task manager inspired that allows us to display the CPU core
     Suggestions? Want to discuss a certain aspect of my work? Please contact me at ayanali20985@gmail.com, use the direct email link in the bottom of the menu on the left, or create a Github pull request.
 </div>
 
-This project is in inspired by [this](https://www.youtube.com/watch?v=4J-DTbZlJ5I).
+<div class="content-container-blue">
+    <div class="dropdown-header">
+        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
+            Analog Task Manager v0.0
+
+            
+    </div>
+    <div class="dropdown-header" class="dropdown-content">
+        This project is in inspired by <a href="https://www.youtube.com/watch?v=4J-DTbZlJ5I">this</a>.
+    </div>
+</div>
+
+<div class="content-container-blue">
+    <div class="dropdown-header">
+        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
+            Analog Task Manager v0.1
+    </div>
+    <div class="dropdown-header" class="dropdown-content">
+        Under-progress, to be deployed within the week.
+    </div>
+</div>
 
 <script>
     // Select all dropdown-header elements
