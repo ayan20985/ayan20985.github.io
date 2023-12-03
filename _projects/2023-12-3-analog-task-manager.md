@@ -83,6 +83,18 @@ Let's make a Analog task manager inspired that allows us to display the CPU core
     color: #D37070; /* Change the color of hyperlinks */
     text-decoration: underline; /* Add underline to hyperlinks */
     }
+
+    .youtube-video {
+        width: 100%;
+        height: 500px; /* Adjust as needed */
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .youtube-video {
+            height: 300px; /* Adjust for smaller screens */
+        }
+    }
 </style>
 
 <div class="content-container" data-bg-image="/assets/images/chevron2.png">
@@ -182,8 +194,8 @@ void loop() {
 }
 ```
 See the following video for a demonstration of this code, the top LED lights up when the temperature exceed 51°C.
-[<img src="https://www.youtube.com/shorts/XGVtSRLHYPk" width="600" height="300"
-/>](https://www.youtube.com/embed/<VIDEO_ID>)
+<iframe width="100%" height=500px src="https://www.youtube.com/embed/XGVtSRLHYPk" frameborder="0" allowfullscreen style="border-radius: 10px;"></iframe>
+
 We have now proven it is possible to do this using the this pipeline. The structure of our software is as follows:
 ```
 analog task manager
