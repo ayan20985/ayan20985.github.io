@@ -14,3 +14,23 @@ Creating a "familiar-future" type graphical interface would be cool and help sup
 <div class="content-container" data-bg-image="/assets/images/chevron2.png">
     Suggestions? Want to discuss a certain aspect of my work? Want to collaborate? Please contact me at ayanali20985@gmail.com, or use the direct email link in the bottom of the menu on the left.
 </div>
+
+<div class="content-container" data-bg-image="/assets/images/chevron2.png">
+    This page is missing the exact methods, references, and inspiration I used to create this project, these will be added soon™.
+</div>
+
+<div class="content-container-blue">
+    <div class="dropdown-header">
+        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
+          Some experiments shown below.
+    </div>
+    <div class="dropdown-header" class="dropdown-content">
+        <div class="pdf-container">
+            <object class="pdf-object" data="/assets/pdf/retro 1.pdf" type="application/pdf">
+                <div class="pdf-fallback">
+                    PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                </div>
+            </object>
+        </div>
+    </div>
+</div>
