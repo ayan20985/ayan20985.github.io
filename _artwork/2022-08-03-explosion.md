@@ -8,4 +8,6 @@ tagg:
 ---
 Learning the simulation workflow generally would be quite useful especially in the case of smoke effects for, say, a steam locomotive; water in a river or against a shoreline; explosions for well cool stuff; etc.
 
-### Content still needs to be formatted and added here.
+<div class="content-container" data-bg-image="/assets/images/chevron2.png">
+    Suggestions? Want to discuss a certain aspect of my work? Want to collaborate? Please contact me at ayanali20985@gmail.com, or use the direct email link in the bottom of the menu on the left.
+</div>.

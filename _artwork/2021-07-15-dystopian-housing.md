@@ -8,4 +8,6 @@ tagg:
 ---
 Bladerunner was such an awesome series, lets make a scene paying homage to that. In the process additional techniques are learned to aid faster scene creation in the future.
 
-### Content still needs to be formatted and added here.
+<div class="content-container" data-bg-image="/assets/images/chevron2.png">
+    Suggestions? Want to discuss a certain aspect of my work? Want to collaborate? Please contact me at ayanali20985@gmail.com, or use the direct email link in the bottom of the menu on the left.
+</div>

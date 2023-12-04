@@ -8,4 +8,6 @@ tagg:
 ---
 Creating a "familiar-future" type graphical interface would be cool and help supplement future projects. Perhaps this type of UI is used as a low-load type interface in a starship.
 
-### Content still needs to be formatted and added here.
+<div class="content-container" data-bg-image="/assets/images/chevron2.png">
+    Suggestions? Want to discuss a certain aspect of my work? Want to collaborate? Please contact me at ayanali20985@gmail.com, or use the direct email link in the bottom of the menu on the left.
+</div>

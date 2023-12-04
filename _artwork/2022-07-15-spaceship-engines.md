@@ -8,4 +8,6 @@ tagg:
 ---
 A spaceship can't move without engines! We need many sizes of engines to work to ensure the ship can manoeuver in a believable way instead of just flying about without visible manavouering engines like in other Sci-Fi content.
 
-### Content still needs to be formatted and added here.
+<div class="content-container" data-bg-image="/assets/images/chevron2.png">
+    Suggestions? Want to discuss a certain aspect of my work? Want to collaborate? Please contact me at ayanali20985@gmail.com, or use the direct email link in the bottom of the menu on the left.
+</div>

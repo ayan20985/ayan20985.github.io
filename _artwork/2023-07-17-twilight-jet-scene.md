@@ -8,4 +8,6 @@ tagg:
 ---
 Let's take break from spaceships and airships, and hone in my modeling skills after it being not practiced for a while by modeling a Mig-25, while doing this let's make a cool scene.
 
-### Content still needs to be formatted and added here.
+<div class="content-container" data-bg-image="/assets/images/chevron2.png">
+    Suggestions? Want to discuss a certain aspect of my work? Want to collaborate? Please contact me at ayanali20985@gmail.com, or use the direct email link in the bottom of the menu on the left.
+</div>
