@@ -17,54 +17,47 @@
     {% endif %}
   </header>
 
+  <!-- Tag display section -->
   <div class="tag-boxes">
     {% for tag in post.tagg %}
       {% assign tag_parts = tag | split: ', ' %}
       <div class="tag" style="background-color:{{ tag_parts[1] }}">{{ tag_parts[0] }}</div>
     {% endfor %}
   </div>
-  
-  <div class="content-container-blue">
-    <footer class="entry-meta">
-      <ul>
-        {% if post.date %}
-          <li><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></li>
-        {% endif %}
-        {% if post.read_time %}
-          <li><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</li>
-        {% endif %}
-      </ul>
-    </footer>
 
-    <div class="entry-excerpt">
-      {% if post.excerpt %}
-        {{ post.excerpt | markdownify }}
-        <p><a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
+  <footer class="entry-meta">
+    <ul>
+      {% if post.date %}
+        <li><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></li>
       {% endif %}
-    </div>
+      {% if post.read_time %}
+        <li><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</li>
+      {% endif %}
+    </ul>
+  </footer>
+  
+  <div class="entry-excerpt">
+    {% if post.excerpt %}
+      {{ post.excerpt | markdownify }}
+      <p><a href="{{ post.url | relative_url }}" class="more-link">{{ site.data.theme.t.read_more | default: 'Read More' }} <span class="icon icon--arrow-right">{% include icon-arrow-right.svg %}</span></a></p>
+    {% endif %}
   </div>
 </article>
 
 <style>
   .rounded-thumbnail img {
-    border-radius: 10px;
-    margin-bottom: 5px;
+    border-radius: 10px; /* Adding rounded corners to the thumbnail images. */
+    margin-bottom: 5px; /* Gap between image and tag */
   }
 
   .tag-boxes .tag {
     display: block;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Gap between tag and excerpt */
     padding: 5px 0;
+    color: white;
     border-radius: 10px;
     text-align: center;
     font-size: 0.9em;
-  }
-
-  .content-container-blue {
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #283741;
   }
 </style>
