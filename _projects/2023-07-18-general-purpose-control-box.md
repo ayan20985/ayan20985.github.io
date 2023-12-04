@@ -3,6 +3,8 @@ title: "General Purpose Control Box"
 layout: page
 image:
   thumbnail: /assets/thumbnails/control box drawing.png
+tagg:
+  - "this project has been completed, #357683"
 ---
 Ever since the 3D printer was finished we were stuck with a mess of wires, let's make a housing for all the electronics. Making it general purpose would allow me to use the electronics easily for other projects too. 
 
