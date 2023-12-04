@@ -5,8 +5,8 @@ image:
   thumbnail: /assets/projects/analog.png
 tagg:
   #- "this project has been completed, #35835b"
-  - "this project's documentation is up to date, #35835b"
   - "this project is in-progress, #D37070"
+  - "this project's documentation is up to date, #35835b"
   #- "this project's documentation is almost complete, #eb9234"
 ---
 Let's make a Analog task manager inspired that allows us to display the CPU core loads, CPU core temperatures, CPU power consumption, GPU load, GPU temperature, GPU power consumption, and memory usage.
