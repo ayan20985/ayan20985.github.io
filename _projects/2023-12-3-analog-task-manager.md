@@ -206,7 +206,95 @@ analog task manager
 ```
 
 # Version v0.1
-Under-progress, to be deployed within the week.
+```py
+import clr #IMPORTANT! pip install pythonnet, NOT pip install clr
+import time 
+
+clr.AddReference('OpenHardwareMonitorLib')
+
+from OpenHardwareMonitor.Hardware import Computer, HardwareType, SensorType
+
+c = Computer()
+c.CPUEnabled = True  # Enable CPU Info
+c.GPUEnabled = True  # Enable GPU Info (optional)
+c.Open()
+
+print("CPU Core Temperatures and Loads")
+print("--------------------------------")
+
+while True:
+    for hardware_item in c.Hardware:
+        if hardware_item.HardwareType == HardwareType.CPU:
+            hardware_item.Update()
+            temperatures = []
+            loads = []
+
+            for sensor in hardware_item.Sensors:
+                if sensor.SensorType == SensorType.Temperature:
+                    temperatures.append(sensor.Value)
+                elif sensor.SensorType == SensorType.Load:
+                    loads.append(sensor.Value)
+
+            # Print in a tabular format
+            for i in range(len(temperatures)):
+                temp_str = f"{temperatures[i]:.1f}°C" if temperatures[i] is not None else "N/A"
+                load_str = f"{loads[i]:.1f}%" if loads[i] is not None else "N/A"
+                print(f"Core {i+1}: Temp = {temp_str}, Load = {load_str}")
+            print("-" * 40)
+
+            break  # Assuming only one CPU, break after processing it
+
+    time.sleep(5)  # Wait for 5 seconds before the next update
+```
+```py
+import clr  # the pythonnet module.
+import serial  # for serial communication
+import time  # for sleeping
+
+clr.AddReference('OpenHardwareMonitorLib')
+
+from OpenHardwareMonitor.Hardware import Computer, HardwareType, SensorType
+
+# Set up serial communication with the Arduino
+ser = serial.Serial('COM4', 9600, timeout=1)
+
+c = Computer()
+c.CPUEnabled = True  # Enable CPU Info
+c.GPUEnabled = True  # Enable GPU Info (optional)
+c.Open()
+
+print("CPU Core Temperatures and Loads")
+print("--------------------------------")
+
+while True:
+    for hardware_item in c.Hardware:
+        if hardware_item.HardwareType == HardwareType.CPU:
+            hardware_item.Update()
+            temperatures = []
+            loads = []
+
+            for sensor in hardware_item.Sensors:
+                if sensor.SensorType == SensorType.Temperature:
+                    temperatures.append(sensor.Value)
+                elif sensor.SensorType == SensorType.Load:
+                    loads.append(sensor.Value)
+
+            # Print and send the temperatures to the Arduino
+            for i in range(len(temperatures)):
+                temp_str = f"{temperatures[i]:.1f}°C" if temperatures[i] is not None else "N/A"
+                load_str = f"{loads[i]:.1f}%" if loads[i] is not None else "N/A"
+                print(f"Core {i+1}: Temp = {temp_str}, Load = {load_str}")
+
+                # Send temperature reading to the Arduino
+                if temperatures[i] is not None:
+                    ser.write(f"{temperatures[i]:.1f}\n".encode())
+
+            print("-" * 40)
+
+            break  # Assuming only one CPU, break after processing it
+
+    time.sleep(5)  # Wait for 5 seconds before the next update
+```
 {% endraw %}
 
 <script>
