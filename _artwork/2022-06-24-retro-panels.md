@@ -4,7 +4,10 @@ layout: page
 image:
   thumbnail: /assets/thumbnails/artwork thumbnail (3).png
 tagg:
-  - "this project has been completed, #357683"
+  - "this project has been completed, #35835b"
+  #- "this project's documentation is up to date, #35835b"
+  #- "this project is in-progress, #D37070"
+  - "this project's documentation is almost complete, #eb9234"
 ---
 Creating a "familiar-future" type graphical interface would be cool and help supplement future projects. Perhaps this type of UI is used as a low-load type interface in a starship.
 

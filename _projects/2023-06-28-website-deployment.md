@@ -4,7 +4,10 @@ layout: page
 image:
   thumbnail: /assets/thumbnails/website deployment.png
 tagg:
-  - "this project has been completed, #357683"
+  - "this project has been completed, #35835b"
+  #- "this project's documentation is up to date, #35835b"
+  #- "this project is in-progress, #D37070"
+  - "this project's documentation is almost complete, #eb9234"
 ---
 Let's make a website to organize all my stuffs into one place. Let's also make the website easy to read and pleasant to look at.
 
