@@ -4,6 +4,80 @@ layout: default
 
 {% include page-intro.html %}
 
+<style>
+  .pdf-container {
+  width: 100%;
+  height: 100vh;
+  border-radius: 20px;
+  overflow: hidden; /* This hides any overflow outside the rounded container */
+  position: relative;
+  }
+
+  .pdf-object {
+  width: 100%;
+  height: 100%;
+  }
+
+  .pdf-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #283741;
+  border-radius: 20px;
+  }
+
+  .content-container-blue {
+  border-radius: 10px;
+  padding: 20px; 
+  margin-bottom: 20px; 
+  background-color: #283741;
+  }
+
+  .content-container {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  }
+
+  .dropdown-content {
+      display: none;
+      overflow: hidden;
+  }
+  
+  /* Adjusted styles for dropdown-header */
+  .dropdown-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding-left: 10px;
+  }
+
+  .dropdown-header:hover {
+      color: #D37070;
+  }
+
+  .dropdown-icon {
+      font-size: 56px;
+      transition: transform 0.3s;
+      margin-right: 25px;
+  }
+
+  .rotate-icon {
+      transform: rotate(-180deg);
+  }
+
+  .dropdown-content {
+      display: none;
+      overflow: hidden;
+      margin-top: 10px;
+  }
+</style>
+
 <main id="main" class="page-content" aria-label="Content">
   <div class="inner">
     <article class="entry-wrap">
@@ -13,3 +87,35 @@ layout: default
     </article>
   </div>
 </main>
+
+<script>
+  // Select all dropdown-header elements
+  var dropdownHeaders = document.querySelectorAll(".dropdown-header");
+
+  // Add click event listener to each dropdown-header
+  dropdownHeaders.forEach(function(header) {
+      header.addEventListener("click", function() {
+          // Find the next sibling element which is the dropdown content
+          var content = this.nextElementSibling;
+          var icon = this.querySelector(".dropdown-icon");
+
+          // Toggle display and icon rotation
+          if (content.style.display === "block") {
+              content.style.display = "none";
+              icon.classList.remove("rotate-icon");
+          } else {
+              content.style.display = "block";
+              icon.classList.add("rotate-icon");
+          }
+      });
+  });
+
+  // Get all elements with the class "content-container"
+  const contentContainers = document.querySelectorAll(".content-container");
+
+  // Loop through the elements and set their background images
+  contentContainers.forEach(container => {
+      const bgImage = container.getAttribute("data-bg-image");
+      container.style.backgroundImage = `url(${bgImage})`;
+  });
+</script>

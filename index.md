@@ -1,87 +1,9 @@
 ---
-layout: page
+layout: index
 paginate: true
 alt_title: "Ayan's Compendium of Assorted Ramblings"
 sub_title: "Ripping pages, welding joints, experimenting empirically, burning electronics, and tuning PIDs."
 ---
-
-<style>
-  .content-container {
-    border-radius: 10px; /* Add rounded corners to the container */
-    padding: 20px; /* Add padding to the container */
-    margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional, for a fixed background */
-  }
-
-  .content-container-blue {
-    border-radius: 10px; /* Add rounded corners to the container */
-    padding: 20px; /* Add padding to the container */
-    margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
-    background-color: #283741; /* Add a background color */
-  }
-  
-  .content-container-breathing {
-    border-radius: 10px; /* Add rounded corners to the container */
-    padding: 20px; /* Add padding to the container */
-    margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional, for a fixed background */
-    animation: breathing 3s infinite; /* Apply the breathing animation */
-  }
-
-  @keyframes breathing {
-    0% {
-      background-color: #51454C; /* Start with red */
-    }
-    50% {
-      background-color: #5D676E; /* Transition to yellow at 50% */
-    }
-    100% {
-      background-color: #51454C; /* Return to red at 100% */
-    }
-  }
-  
-  .content-container a {
-    color: #D37070; /* Change the color of hyperlinks */
-    text-decoration: underline; /* Add underline to hyperlinks */
-  }
-
-  .content-container-scrolling {
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #51454C;
-    overflow: hidden; /* Hide the overflow content */
-    white-space: nowrap; /* Prevent text from wrapping */
-    width: 100%; /* Set the width to 100% to span the body */
-    font-size: 17px;
-  }
-
-  .scroll-text {
-    animation: scroll 30s linear infinite; /* Adjust the animation duration as needed */
-    animation-delay: 0s; /* Reduce the delay to 3 seconds */
-    display: inline-block;
-    font-family: 'Fira Code', sans-serif;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(25%);
-    }
-    100% {
-      transform: translateX(-100%); /* Adjust the distance for a smoother scroll */
-    }
-  }
-
-  .content-container-scrolling:hover .scroll-text {
-    animation-play-state: paused;
-  }
-</style>
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
 
 <!-- <div class="content-container" data-bg-image="assets/images/chevron2.png">
   This website is still under construction, while most of the structure and programming is complete content still remains.
@@ -115,14 +37,3 @@ sub_title: "Ripping pages, welding joints, experimenting empirically, burning el
 <div class="content-container" data-bg-image="assets/images/chevron2.png">
   Notes for the 19th of October available <a href="/19102023/">here</a>.
 </div>
-
-<script>
-  // Get all elements with the class "content-container"
-  const contentContainers = document.querySelectorAll(".content-container");
-
-  // Loop through the elements and set their background images
-  contentContainers.forEach(container => {
-    const bgImage = container.getAttribute("data-bg-image");
-    container.style.backgroundImage = `url(${bgImage})`;
-  });
-</script>

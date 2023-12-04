@@ -4,80 +4,6 @@ layout: page
 ---
 12 Chapters, 18 weeks of study, 11 schools, ~2500 eligible students, and Fusion 360. Designed to teach students from Grades 9 to 12 industry standard CAD practices that emphasize design thinking and modelling intuition. Skills learned can be transferred to programs outside of fusion 360. <!-- Plans to deploy to ~53 schools or ~15000 eligible students. --> Open-source and free forever.
 
-<style>
-    .pdf-container {
-    width: 100%;
-    height: 100vh;
-    border-radius: 20px; /* Adjust the value for the desired roundness */
-    overflow: hidden; /* This hides any overflow outside the rounded container */
-    position: relative;
-    }
-
-    .pdf-object {
-    width: 100%;
-    height: 100%;
-    }
-
-    .pdf-fallback {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #283741;
-    border-radius: 20px;
-    }
-
-    .content-container-blue {
-    border-radius: 10px; /* Add rounded corners to the container */
-    padding: 20px; /* Add padding to the container */
-    margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
-    background-color: #283741; /* Add a background color */
-    }
-
-    .content-container {
-    border-radius: 10px; /* Add rounded corners to the container */
-    padding: 20px; /* Add padding to the container */
-    margin-bottom: 20px; /* Add bottom margin to create space between container and text below */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional, for a fixed background */
-    }
-
-    .dropdown-content {
-        display: none;
-        overflow: hidden;
-    }
-    
-    /* Adjusted styles for dropdown-header */
-    .dropdown-header {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        padding-left: 10px;
-    }
-
-    .dropdown-header:hover {
-        color: #D37070;
-    }
-
-    .dropdown-icon {
-        font-size: 56px;
-        transition: transform 0.3s;
-        margin-right: 25px;
-    }
-
-    .rotate-icon {
-        transform: rotate(-180deg);
-    }
-
-    .dropdown-content {
-        display: none;
-        overflow: hidden;
-        margin-top: 10px;
-    }
-</style>
-
 <div class="content-container" data-bg-image="/assets/images/chevron2.png">
     Currently being updated and reworked for the new academic year as according to feedback given in the initial feedback stage. Updated version to be posted in the month of February. Below are specimen documents.
 </div>
@@ -197,37 +123,5 @@ layout: page
         </div>
     </div>
 </div>
-
-<script>
-    // Select all dropdown-header elements
-    var dropdownHeaders = document.querySelectorAll(".dropdown-header");
-
-    // Add click event listener to each dropdown-header
-    dropdownHeaders.forEach(function(header) {
-        header.addEventListener("click", function() {
-            // Find the next sibling element which is the dropdown content
-            var content = this.nextElementSibling;
-            var icon = this.querySelector(".dropdown-icon");
-
-            // Toggle display and icon rotation
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                icon.classList.remove("rotate-icon");
-            } else {
-                content.style.display = "block";
-                icon.classList.add("rotate-icon");
-            }
-        });
-    });
-
-    // Get all elements with the class "content-container"
-    const contentContainers = document.querySelectorAll(".content-container");
-
-    // Loop through the elements and set their background images
-    contentContainers.forEach(container => {
-        const bgImage = container.getAttribute("data-bg-image");
-        container.style.backgroundImage = `url(${bgImage})`;
-    });
-</script>
 
 *All documents uploaded here are under the [CC BY-NC-SA 4.0 DEED License](https://creativecommons.org/licenses/by-nc-sa/4.0/).*
