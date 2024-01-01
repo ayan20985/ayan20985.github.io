@@ -30,15 +30,15 @@ Okay so there's this electric car competition, our school has an electric car. L
     </div>
 </div>
 
-![car1]({{ site.url }}{{ site.baseurl }}\assets\car\car thumb.jpg){: .align-center}
+![car1]({{ site.url }}{{ site.baseurl }}\assets\car\car thumb.JPG){: .align-center}
 
-![car2]({{ site.url }}{{ site.baseurl }}\assets\car\designing.jpg){: .align-center}
+![car2]({{ site.url }}{{ site.baseurl }}\assets\car\designing.JPG){: .align-center}
 
-![car3]({{ site.url }}{{ site.baseurl }}\assets\car\electrical mess.jpg){: .align-center}
+![car3]({{ site.url }}{{ site.baseurl }}\assets\car\electrical mess.JPG){: .align-center}
 
-![car4]({{ site.url }}{{ site.baseurl }}\assets\car\more mess.jpg){: .align-center}
+![car4]({{ site.url }}{{ site.baseurl }}\assets\car\more mess.JPG){: .align-center}
 
-![car5]({{ site.url }}{{ site.baseurl }}\assets\car\new office.jpg){: .align-center}
+![car5]({{ site.url }}{{ site.baseurl }}\assets\car\new office.JPG){: .align-center}
 
 Some further working points and points that have been covered:
 1. Designed new Aluminum Chassis to reduce mass of chassis, ran finite element analysis simulations to ensure vehicle holds up in a race and in crash scenarios.
