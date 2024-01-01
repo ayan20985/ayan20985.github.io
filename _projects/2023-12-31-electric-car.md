@@ -2,7 +2,7 @@
 title: "Electric Car for Race Competition"
 layout: page
 image:
-  thumbnail: /assets/car/car thumb.png
+  thumbnail: /assets/car/cartt.JPG
 tagg:
   #- "this project has been completed, #35835b"
   #- "this project's documentation is up to date, #35835b"
@@ -11,21 +11,33 @@ tagg:
 ---
 
 Okay so there's this electric car competition, our school has an electric car. Let's improve the design to make it vastly superior to other racecars, I have limited time to complete this so lets blitz it and hope for the best. This is a team project!
+
   <iframe width="100%" height="500px" src="https://www.youtube.com/embed/g_upgBN0yWs?si=bb8o198xbWuEm0Bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 10px;"></iframe>
 
-Electric racecar disassembled for taking measurements:
+<div class="content-container-blue">
+    <div class="dropdown-header">
+        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
+        Design Review #1 Technical Drawing for getting quote on the cost of fabrication.
+    </div>
+    <div class="dropdown-header" class="dropdown-content">
+        <div class="pdf-container">
+            <object class="pdf-object" data="/assets/pdf/quote1.pdf" type="application/pdf">
+                <div class="pdf-fallback">
+                    PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                </div>
+            </object>
+        </div>
+    </div>
+</div>
+
 ![car1]({{ site.url }}{{ site.baseurl }}\assets\car\car thumb.jpg){: .align-center}
 
-Designing, woah:
 ![car2]({{ site.url }}{{ site.baseurl }}\assets\car\designing.jpg){: .align-center}
 
-Testing energetics:
 ![car3]({{ site.url }}{{ site.baseurl }}\assets\car\electrical mess.jpg){: .align-center}
 
-More mess:
 ![car4]({{ site.url }}{{ site.baseurl }}\assets\car\more mess.jpg){: .align-center}
 
-New office! Still setting up, but nice and spacious, sadly no AC.
 ![car5]({{ site.url }}{{ site.baseurl }}\assets\car\new office.jpg){: .align-center}
 
 Some further working points and points that have been covered:
