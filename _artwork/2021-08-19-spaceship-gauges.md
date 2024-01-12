@@ -29,6 +29,9 @@ I think its time we make a spaceship, we need some gauges and panels to populate
             <object class="pdf-object" data="/assets/pdf/panels 1.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -45,6 +48,9 @@ I think its time we make a spaceship, we need some gauges and panels to populate
             <object class="pdf-object" data="/assets/pdf/panels 2.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -61,6 +67,9 @@ I think its time we make a spaceship, we need some gauges and panels to populate
             <object class="pdf-object" data="/assets/pdf/panels 3.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>

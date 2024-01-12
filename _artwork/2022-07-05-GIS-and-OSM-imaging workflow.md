@@ -27,6 +27,9 @@ What if we placed the spaceships in a near-future type scene where we have a spa
             <object class="pdf-object" data="/assets/pdf/GIS 1.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -43,6 +46,9 @@ What if we placed the spaceships in a near-future type scene where we have a spa
             <object class="pdf-object" data="/assets/pdf/GIS 2.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -59,6 +65,9 @@ What if we placed the spaceships in a near-future type scene where we have a spa
             <object class="pdf-object" data="/assets/pdf/GIS 3.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>

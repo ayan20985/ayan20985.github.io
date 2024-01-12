@@ -27,6 +27,9 @@ tagg:
             <object class="pdf-object" data="/assets/pdf/3D-Modelling Pacing Chart v0.07.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -43,6 +46,9 @@ tagg:
             <object class="pdf-object" data="/assets/pdf/C1 Main PowerPoint vFINAL.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -59,6 +65,9 @@ tagg:
             <object class="pdf-object" data="/assets/pdf/C4 Modeling Exercises v0.02.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -75,6 +84,9 @@ tagg:
             <object class="pdf-object" data="/assets/pdf/C5 Design Briefs v0.02.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -91,6 +103,9 @@ tagg:
             <object class="pdf-object" data="/assets/pdf/3D-Modelling Glossary of Terms Booklet v0.02.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -107,6 +122,9 @@ tagg:
             <object class="pdf-object" data="/assets/pdf/3D-Modelling Keyboard Shortcuts Booklet v0.03 .pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
@@ -123,6 +141,9 @@ tagg:
             <object class="pdf-object" data="/assets/pdf/3D-Modelling Book vPRE.pdf" type="application/pdf">
                 <div class="pdf-fallback">
                     PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
                 </div>
             </object>
         </div>
