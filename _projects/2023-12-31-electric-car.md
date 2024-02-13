@@ -34,7 +34,29 @@ Okay so there's this electric car competition, our school has an electric car. L
             </object>
         </div>
     </div>
-</div>  
+</div>
+
+<div class="content-container-blue">
+    <div class="dropdown-header">
+        <span class="dropdown-icon">&#9660;</span> <!-- Down-arrow icon -->
+        Executive Document Summary for the new Aluminum Chassis.
+    </div>
+    <div class="dropdown-header" class="dropdown-content">
+        <div class="pdf-container">
+            <object class="pdf-object" data="/assets/pdf/Aluminium Chassis Document.pdf" type="application/pdf">
+                <div class="pdf-fallback">
+                    PDF cannot be displayed. Please use a browser that supports native PDF representation such as Firefox, Microsoft Edge, or Chrome.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
+                    <br>
+                    <br>
+                    Mobile and tablet devices cannot display these PDFs. Please use a desktop or laptop computer to view this PDF. If the issue persists please contact website administrator.
+                </div>
+            </object>
+        </div>
+    </div>
+</div> 
 
 ![car1]({{ site.url }}{{ site.baseurl }}\assets\car\car thumb.JPG){: .align-center}
 
