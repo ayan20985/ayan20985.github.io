@@ -5,6 +5,7 @@ categories:
 tags:
 last_modified_at: 2023-06-29T14:25:52-05:00
 comments: false
+layout: page
 ---
 Adding an image carousel would allow me to quickly showcase my work in the ↯ Artwork tab. It would also give me the know-how to add additional features as mentioned in the conclusion.
 

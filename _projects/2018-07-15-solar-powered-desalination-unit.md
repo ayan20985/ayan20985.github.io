@@ -4,10 +4,10 @@ layout: page
 image:
   thumbnail: /assets/projects/SPUD.png
 tagg:
-  - "this project has been completed, #35835b"
-  - "this project's documentation is up to date, #35835b"
-  #- "this project is in-progress, #D37070"
-  #- "this project's documentation is almost complete, #eb9234"
+  - "this project has been completed, #285731"
+  - "this project's documentation is up to date, #285731"
+  - #"this project is in-progress, #283741"
+  - #"this project's documentation is in progress, #733520"
 ---
 Water scarcity is quite a large problem lets try to tackle this by taking unpotable salty water and distill it into potable drinking water.
 

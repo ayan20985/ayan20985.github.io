@@ -19,7 +19,7 @@ Hello! My name is Ayan Ali; I am a Year 13 student currently studying A-levels. 
 - Deployed my own CSS+HTML+JS based website. With in-progress ray-traced effects for coolness factor.
 - Designed, manufactured, and tested my own solar-powered water desalination device for regions with polluted water.
 
-- In-progress research paper on perpetual solar flight as part of my EPQ. (publishing an extended 25000-35000 word paper).
+- Completed research paper on perpetual solar flight as part of my EPQ. Scored 56/56 and A*. (published an extended 25000-35000 word paper).
 - Completed AS-levels in Summer 2023.
 
 <!-- # Completed Examinations

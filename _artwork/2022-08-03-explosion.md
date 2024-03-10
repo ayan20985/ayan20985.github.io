@@ -4,10 +4,10 @@ layout: page
 image:
   thumbnail: /assets/thumbnails/artwork thumbnail (6).png
 tagg:
-  - "this project has been completed, #35835b"
-  #- "this project's documentation is up to date, #35835b"
-  #- "this project is in-progress, #D37070"
-  - "this project's documentation is almost complete, #eb9234"
+  - "this project has been completed, #285731"
+  - "this project's documentation is in progress, #733520"
+  - #"this project's documentation is up to date, #285731"
+  - #"this project is in-progress, #283741"
 ---
 Learning the simulation workflow generally would be quite useful especially in the case of smoke effects for, say, a steam locomotive; water in a river or against a shoreline; explosions for well cool stuff; etc.
 

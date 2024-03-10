@@ -4,6 +4,10 @@ sub_title: "Below are resources I find useful, site documentation, and my readin
 layout: page
 permalink: /miscellaneous/
 ---
+<div class="content-container" data-bg-image="../assets/images/chevron2.png">
+    This section is undergoing reprogramming so that books and resources are displayed neatly. My reading list is not complete and will be updated once I get around to it after the A-level May/June series of exams.
+</div>
+
 # Useful Resources
 - **[The Art + Science of PCB Design @ MIT](https://pcb.mit.edu/)**  
 Open-source resources for learning PCB design.
@@ -117,6 +121,6 @@ If you would like the entire history of the all of Middle Earth read the followi
 
 Some last notes to make would be that The Silmarillion was quite a challenging read for me so I listened to it as an audiobook while following the text in a physical copy of the book. It should also be noted that The Fall of Numenor (2022) was recently released, it contains the same text as the books The Silmarillion, Unfinished Tales of Numenor and Middle-earth, The History of Middle-earth, and The Nature of Middle-earth but has some additional art done to supplement the text.
 
-**The Entire DUNE Series**
+<!--**The Entire DUNE Series**
 
-**https://www.aftrmrktstore.com/**
+**https://www.aftrmrktstore.com/** -->

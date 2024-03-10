@@ -2,14 +2,13 @@
 title: "Electric Car for Race Competition"
 layout: page
 image:
-  thumbnail: /assets/car/cartt.JPG
+  thumbnail: /assets/thumbnails/car thing.png
 tagg:
-  #- "this project has been completed, #35835b"
-  #- "this project's documentation is up to date, #35835b"
-  - "this project is in-progress, #D37070"
-  - "this project's documentation is almost complete, #eb9234"
+  - "this project has been completed, #285731"
+  - "this project's documentation is up to date, #285731"
+  - #"this project is in-progress, #283741"
+  - #"this project's documentation is in progress, #733520"
 ---
-
 Okay so there's this electric car competition, our school has an electric car. Let's improve the design to make it vastly superior to other racecars, I have limited time to complete this so lets blitz it and hope for the best. This is a team project!
 
   <iframe width="100%" height="500px" src="https://www.youtube.com/embed/g_upgBN0yWs?si=bb8o198xbWuEm0Bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 10px;"></iframe>

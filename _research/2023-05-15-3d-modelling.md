@@ -1,11 +1,13 @@
 ---
-title: "Syllabus for 3D Modelling in an Engineering Context"
+title: "Introductory, Intermediatory, and Advanced Skills to Fusion 360 and Overall Design for Engineering"
 layout: page
+image:
+  thumbnail: /assets/thumbnails/oo.png
 tagg:
-  - "this project has been completed, #35835b"
-  - "this project's documentation is up to date, #35835b"
-  #- "this project is in-progress, #D37070"
-  #- "this project's documentation is almost complete, #eb9234"
+  - "this project has been completed, #285731"
+  - "this project's documentation is up to date, #285731"
+  - #"this project is in-progress, #283741"
+  - #"this project's documentation is in progress, #733520"
 ---
 12 Chapters, 18 weeks of study, 11 schools, ~2500 eligible students, and Fusion 360. Designed to teach students from Grades 9 to 12 industry standard CAD practices that emphasize design thinking and modelling intuition. Skills learned can be transferred to programs outside of fusion 360. <!-- Plans to deploy to ~53 schools or ~15000 eligible students. --> Open-source and free forever.
 

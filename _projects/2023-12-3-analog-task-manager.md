@@ -2,14 +2,14 @@
 title: "Analog Gauge-Based Task Manager"
 layout: page
 image:
-  thumbnail: /assets/projects/analog.png
+  thumbnail: /assets/thumbnails/analog.png
 tagg:
-  #- "this project has been completed, #35835b"
-  - "this project is in-progress, #D37070"
-  - "this project's documentation is up to date, #35835b"
-  #- "this project's documentation is almost complete, #eb9234"
+  - "this project is in-progress, #283741"
+  - "this project's documentation is up to date, #285731"
+  - #"this project has been completed, #285731"
+  - #"this project's documentation is in progress, #733520"
 ---
-Let's make a Analog task manager inspired that allows us to display the CPU core loads, CPU core temperatures, CPU power consumption, GPU load, GPU temperature, GPU power consumption, and memory usage.
+Let's make a Analog task manager inspired that allows us to display the CPU core loads, CPU core temperatures, CPU power consumption, GPU load, GPU temperature, GPU power consumption, and memory usage. We could also make modular blocks that can form a larger display, perhaps using unconventional 6.35mm headphone jacks for communication between blocks might be cool.
 
 <div class="content-container" data-bg-image="/assets/images/chevron2.png">
     This project is available as a Github Repository <a href="https://github.com/420Ayan420/analog-task-manager">here</a>.

@@ -5,6 +5,7 @@ categories:
 tags:
 last_modified_at: 2023-06-28T14:25:52-05:00
 comments: false
+layout: page
 ---
 Adding rounded corners would make the website a lot more pleasant to look at, allow for a more seamless design especially on the art work page, and add just a little bit more spice.
 
