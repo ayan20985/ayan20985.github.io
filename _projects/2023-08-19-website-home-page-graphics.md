@@ -2,7 +2,7 @@
 title: "Website Home Page Graphics"
 layout: page
 image:
-  thumbnail: /assets/projects/ROTATE.png
+  thumbnail: /assets/thumbnails/nut.png
 tagg:
   - "this project is in-progress, #283741"
   - "this project's documentation is in progress, #733520"
