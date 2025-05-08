@@ -26,7 +26,7 @@ logo: /assets/images/logo.png
 search: true
 search_full_content: false # true, false (default)
 search_provider: lunr
-copyright: "2023, Made with <3 and strawberry flavored milk."
+copyright: "2025, Made with <3 and strawberry flavored milk."
 algolia:
   application_id: # YOUR_APPLICATION_ID
   index_name: # YOUR_INDEX_NAME
