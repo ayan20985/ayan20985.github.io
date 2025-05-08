@@ -1,20 +1,11 @@
 <footer id="footer" class="site-footer">
   <div class="inner">
-    <div class="copyright" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    <div class="copyright">
       {% if site.copyright %}
-        <span style="display: flex; align-items: center;">{{ site.copyright | markdownify }}</span>
+        {{ site.copyright | markdownify }}
       {% else %}
-        <span style="display: flex; align-items: center;">&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</span>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
       {% endif %}
-      
-      <!-- SKULE Test Webring Widget -->
-      <div class="webring-widget" style="display: flex; align-items: center;">
-        <a href="https://webring.ayanali.net/#https://ayanali.net?nav=prev" style="color: inherit; text-decoration: none; font-size: 1rem;">←</a>
-        <a href="https://webring.ayanali.net/#https://ayanali.net" target="_blank" style="display: flex; align-items: center; margin: 0 8px;">
-          <img src="https://webring.ayanali.net/img/icon-dark.svg" alt="SKULE Website Phone Book" style="width: 24px; height: 24px;"/>
-        </a>
-        <a href="https://webring.ayanali.net/#https://ayanali.net?nav=next" style="color: inherit; text-decoration: none; font-size: 1rem;">→</a>
-      </div>
     </div>
   </div>
 </footer>
