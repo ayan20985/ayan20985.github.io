@@ -9,3 +9,57 @@
       {% include search/algolia-search-scripts.html %}
   {%- endcase -%}
 {% endif %}
+
+<!-- Countdown and redirect script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize countdown
+    var countdownElement = document.getElementById('countdown');
+    var redirectBanner = document.getElementById('redirect-banner');
+    var seconds = 15;
+    var countdownInterval;
+    
+    // Add close button to banner
+    if (redirectBanner) {
+      var closeButton = document.createElement('button');
+      closeButton.innerHTML = '&times;';
+      closeButton.style.position = 'absolute';
+      closeButton.style.right = '10px';
+      closeButton.style.top = '50%';
+      closeButton.style.transform = 'translateY(-50%)';
+      closeButton.style.background = 'none';
+      closeButton.style.border = 'none';
+      closeButton.style.fontSize = '1.5rem';
+      closeButton.style.cursor = 'pointer';
+      closeButton.style.color = 'inherit';
+      closeButton.style.padding = '0 5px';
+      closeButton.title = 'Cancel redirect';
+      
+      // Make banner relatively positioned for absolute positioning of the close button
+      redirectBanner.style.position = 'relative';
+      
+      // Add the close button to the banner
+      redirectBanner.appendChild(closeButton);
+      
+      // Close banner and cancel redirect when clicked
+      closeButton.addEventListener('click', function() {
+        redirectBanner.style.display = 'none';
+        clearInterval(countdownInterval);
+      });
+    }
+
+    // Update countdown every second
+    countdownInterval = setInterval(function() {
+      seconds--;
+      if (countdownElement) {
+        countdownElement.textContent = seconds;
+      }
+      
+      // When countdown reaches 0, redirect
+      if (seconds <= 0) {
+        clearInterval(countdownInterval);
+        window.location.href = 'https://new.ayanali.net';
+      }
+    }, 1000);
+  });
+</script>
