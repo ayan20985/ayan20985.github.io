@@ -15,7 +15,9 @@
           Redirecting to <a href="https://new.ayanali.net" style="color: #63c2de; text-decoration: underline;">new.ayanali.net</a> in <span id="countdown" style="font-weight: bold; color: #63c2de;">15</span> seconds.<br>
           This website will be used to store old data until the new website is ready.
         </p>
-        <button id="cancel-redirect" style="background-color: #63c2de; color: #283741; border: none; padding: 8px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px;">Cancel Redirect</button>
+        <p style="margin-bottom: 0; font-size: 0.9rem; color: #aaa;">
+          To cancel the redirect please close this window.
+        </p>
       </div>
     </div>
 
@@ -76,7 +78,6 @@
         const countdownElement = document.getElementById('countdown');
         const redirectOverlay = document.getElementById('redirect-overlay');
         const closeButton = document.getElementById('close-popup');
-        const cancelButton = document.getElementById('cancel-redirect');
         
         const countdownInterval = setInterval(function() {
           seconds--;
@@ -88,13 +89,8 @@
           }
         }, 1000);
 
-        // Add event listeners to close popup
+        // Add event listener to close popup
         closeButton.addEventListener('click', function() {
-          redirectOverlay.style.display = 'none';
-          clearInterval(countdownInterval);
-        });
-
-        cancelButton.addEventListener('click', function() {
           redirectOverlay.style.display = 'none';
           clearInterval(countdownInterval);
         });
