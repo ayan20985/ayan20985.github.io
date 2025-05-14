@@ -16,6 +16,7 @@
     // Initialize countdown
     var countdownElement = document.getElementById('countdown');
     var redirectBanner = document.getElementById('redirect-banner');
+    var mainContent = document.getElementById('main-website-content');
     var seconds = 15;
     var redirectActive = true;
 
@@ -45,9 +46,9 @@
       this.style.opacity = '0.8';
     });
     
-    // Make the banner relatively positioned to contain the close button
+    // Position the banner relatively to allow the close button to be positioned
     if (redirectBanner) {
-      redirectBanner.style.position = 'fixed';
+      redirectBanner.style.position = 'relative';
       redirectBanner.appendChild(closeButton);
     }
 
@@ -57,11 +58,6 @@
       clearInterval(countdownInterval);
       if (redirectBanner) {
         redirectBanner.style.display = 'none';
-        // Remove the padding from the wrapper once banner is closed
-        var contentWrapper = document.querySelector('div[style*="padding-top: 55px"]');
-        if (contentWrapper) {
-          contentWrapper.style.paddingTop = '0';
-        }
       }
     });
 

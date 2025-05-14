@@ -4,15 +4,15 @@
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {{ page.title | slugify }}">
     
-    <!-- Redirect Notification Banner -->
-    <div id="redirect-banner" style="background-color: #00bcd4; color: white; padding: 15px 20px; text-align: center; font-family: inherit; width: 100%; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; display: block;">
+    <!-- Redirect Notification Banner (Completely separate from the main content) -->
+    <div id="redirect-banner" style="background-color: #00bcd4; color: white; padding: 15px 20px; text-align: center; font-family: inherit; width: 100%; display: block; z-index: 1001; margin: 0;">
       <p style="margin: 0; font-size: 1rem; font-weight: 500;">
         Redirecting to <a href="https://new.ayanali.net" style="color: white; text-decoration: underline; font-weight: bold;">new.ayanali.net</a> in <span id="countdown" style="font-weight: bold;">15</span> seconds, this website will be used to store old data until the new website is ready. To cancel the redirect please close this window.
       </p>
     </div>
 
-    <!-- Add padding to push content down -->
-    <div style="padding-top: 55px;">
+    <!-- Main website content as a separate div -->
+    <div id="main-website-content">
       {% include skip-links.html %}
 
       <div class="sidebar-toggle-wrapper" style="display: flex; align-items: center; gap: 1rem;">
@@ -61,9 +61,10 @@
           </div>
         </div>
       </div>
+
+      {% include footer.html %}
     </div>
 
-    {% include footer.html %}
     {% include scripts.html %}
 
   </body>
