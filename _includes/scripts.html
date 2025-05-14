@@ -29,14 +29,25 @@
     closeButton.style.transform = 'translateY(-50%)';
     closeButton.style.background = 'none';
     closeButton.style.border = 'none';
-    closeButton.style.fontSize = '1.5rem';
+    closeButton.style.fontSize = '1.75rem';
+    closeButton.style.fontWeight = 'bold';
     closeButton.style.cursor = 'pointer';
-    closeButton.style.color = 'inherit';
+    closeButton.style.color = 'white';
     closeButton.style.padding = '0 10px';
+    closeButton.style.opacity = '0.8';
+    closeButton.style.transition = 'opacity 0.2s ease';
+    
+    // Hover effect
+    closeButton.addEventListener('mouseover', function() {
+      this.style.opacity = '1';
+    });
+    closeButton.addEventListener('mouseout', function() {
+      this.style.opacity = '0.8';
+    });
     
     // Make the banner relatively positioned to contain the close button
     if (redirectBanner) {
-      redirectBanner.style.position = 'relative';
+      redirectBanner.style.position = 'fixed';
       redirectBanner.appendChild(closeButton);
     }
 
@@ -46,6 +57,11 @@
       clearInterval(countdownInterval);
       if (redirectBanner) {
         redirectBanner.style.display = 'none';
+        // Remove the padding from the wrapper once banner is closed
+        var contentWrapper = document.querySelector('div[style*="padding-top: 55px"]');
+        if (contentWrapper) {
+          contentWrapper.style.paddingTop = '0';
+        }
       }
     });
 
