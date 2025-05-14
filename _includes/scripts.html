@@ -15,20 +15,43 @@
   document.addEventListener('DOMContentLoaded', function() {
     // Initialize countdown
     var countdownElement = document.getElementById('countdown');
+    var redirectBanner = document.getElementById('redirect-banner');
+    var closeButton = document.getElementById('close-redirect');
+    var mainContent = document.getElementById('main-content');
     var seconds = 15;
+    var countdownInterval;
 
-    // Update countdown every second
-    var countdownInterval = setInterval(function() {
-      seconds--;
-      if (countdownElement) {
-        countdownElement.textContent = seconds;
-      }
-      
-      // When countdown reaches 0, redirect
-      if (seconds <= 0) {
+    // Start countdown
+    function startCountdown() {
+      countdownInterval = setInterval(function() {
+        seconds--;
+        if (countdownElement) {
+          countdownElement.textContent = seconds;
+        }
+        
+        // When countdown reaches 0, redirect
+        if (seconds <= 0) {
+          clearInterval(countdownInterval);
+          window.location.href = 'https://new.ayanali.net';
+        }
+      }, 1000);
+    }
+
+    // Start the countdown initially
+    startCountdown();
+
+    // Add event listener to close button
+    if (closeButton && redirectBanner && mainContent) {
+      closeButton.addEventListener('click', function() {
+        // Clear the countdown interval to cancel the redirect
         clearInterval(countdownInterval);
-        window.location.href = 'https://new.ayanali.net';
-      }
-    }, 1000);
+        
+        // Hide the redirect banner
+        redirectBanner.style.display = 'none';
+        
+        // Adjust the main content position
+        mainContent.style.marginTop = '0';
+      });
+    }
   });
 </script>
