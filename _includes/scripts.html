@@ -15,42 +15,20 @@
   document.addEventListener('DOMContentLoaded', function() {
     // Initialize countdown
     var countdownElement = document.getElementById('countdown');
-    var popupElement = document.getElementById('redirect-popup');
-    var overlayElement = document.getElementById('popup-overlay');
-    var cancelButton = document.getElementById('cancel-redirect');
     var seconds = 15;
-    var redirectTimer;
 
-    // Start countdown
-    startCountdown();
-
-    // Function to start the countdown
-    function startCountdown() {
-      // Clear any existing interval
-      if (redirectTimer) clearInterval(redirectTimer);
+    // Update countdown every second
+    var countdownInterval = setInterval(function() {
+      seconds--;
+      if (countdownElement) {
+        countdownElement.textContent = seconds;
+      }
       
-      // Set new interval
-      redirectTimer = setInterval(function() {
-        seconds--;
-        if (countdownElement) {
-          countdownElement.textContent = seconds;
-        }
-        
-        // When countdown reaches 0, redirect
-        if (seconds <= 0) {
-          clearInterval(redirectTimer);
-          window.location.href = 'https://new.ayanali.net';
-        }
-      }, 1000);
-    }
-
-    // Cancel redirect when the close button is clicked
-    if (cancelButton) {
-      cancelButton.addEventListener('click', function() {
-        clearInterval(redirectTimer);
-        if (popupElement) popupElement.style.display = 'none';
-        if (overlayElement) overlayElement.style.display = 'none';
-      });
-    }
+      // When countdown reaches 0, redirect
+      if (seconds <= 0) {
+        clearInterval(countdownInterval);
+        window.location.href = 'https://new.ayanali.net';
+      }
+    }, 1000);
   });
 </script>
