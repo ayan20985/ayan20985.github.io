@@ -3,15 +3,15 @@
   {% include head.html %}
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {{ page.title | slugify }}">
-
-    {% include skip-links.html %}
-
+    
     <!-- Redirect Notification Banner -->
-    <div id="redirect-banner" style="background-color: #f0f0f0; border-bottom: 1px solid #ddd; padding: 10px 20px; text-align: center; font-family: inherit; width: 100%;">
-      <p style="margin: 0; font-size: 1rem;">
-        Redirecting to <a href="https://new.ayanali.net" style="color: inherit; text-decoration: underline;">new.ayanali.net</a> in <span id="countdown">15</span> seconds, this website will be used to store old data until the new website is ready. To cancel the redirect please close this window.
+    <div id="redirect-banner" style="background-color: var(--accent-color, #00bcd4); color: white; border-bottom: 1px solid var(--border-color, #ddd); padding: 15px 20px; text-align: center; font-family: inherit; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+      <p style="margin: 0; font-size: 1rem; font-weight: 500;">
+        Redirecting to <a href="https://new.ayanali.net" style="color: white; text-decoration: underline; font-weight: bold;">new.ayanali.net</a> in <span id="countdown" style="font-weight: bold;">15</span> seconds, this website will be used to store old data until the new website is ready. To cancel the redirect please close this window.
       </p>
     </div>
+
+    {% include skip-links.html %}
 
     <div class="sidebar-toggle-wrapper" style="display: flex; align-items: center; gap: 1rem;">
       <!-- Webring Widget -->
