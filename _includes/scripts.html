@@ -15,51 +15,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     // Initialize countdown
     var countdownElement = document.getElementById('countdown');
-    var redirectBanner = document.getElementById('redirect-banner');
-    var mainContent = document.getElementById('main-website-content');
     var seconds = 15;
-    var redirectActive = true;
-
-    // Add a close button to the banner
-    var closeButton = document.createElement('button');
-    closeButton.innerHTML = '×';
-    closeButton.setAttribute('aria-label', 'Cancel redirect');
-    closeButton.style.position = 'absolute';
-    closeButton.style.right = '10px';
-    closeButton.style.top = '50%';
-    closeButton.style.transform = 'translateY(-50%)';
-    closeButton.style.background = 'none';
-    closeButton.style.border = 'none';
-    closeButton.style.fontSize = '1.75rem';
-    closeButton.style.fontWeight = 'bold';
-    closeButton.style.cursor = 'pointer';
-    closeButton.style.color = 'white';
-    closeButton.style.padding = '0 10px';
-    closeButton.style.opacity = '0.8';
-    closeButton.style.transition = 'opacity 0.2s ease';
-    
-    // Hover effect
-    closeButton.addEventListener('mouseover', function() {
-      this.style.opacity = '1';
-    });
-    closeButton.addEventListener('mouseout', function() {
-      this.style.opacity = '0.8';
-    });
-    
-    // Position the banner relatively to allow the close button to be positioned
-    if (redirectBanner) {
-      redirectBanner.style.position = 'relative';
-      redirectBanner.appendChild(closeButton);
-    }
-
-    // Cancel redirect when close button is clicked
-    closeButton.addEventListener('click', function() {
-      redirectActive = false;
-      clearInterval(countdownInterval);
-      if (redirectBanner) {
-        redirectBanner.style.display = 'none';
-      }
-    });
 
     // Update countdown every second
     var countdownInterval = setInterval(function() {
@@ -69,7 +25,7 @@
       }
       
       // When countdown reaches 0, redirect
-      if (seconds <= 0 && redirectActive) {
+      if (seconds <= 0) {
         clearInterval(countdownInterval);
         window.location.href = 'https://new.ayanali.net';
       }
