@@ -9,26 +9,3 @@
       {% include search/algolia-search-scripts.html %}
   {%- endcase -%}
 {% endif %}
-
-<!-- Countdown and redirect script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Initialize countdown
-    var countdownElement = document.getElementById('countdown');
-    var seconds = 15;
-
-    // Update countdown every second
-    var countdownInterval = setInterval(function() {
-      seconds--;
-      if (countdownElement) {
-        countdownElement.textContent = seconds;
-      }
-      
-      // When countdown reaches 0, redirect
-      if (seconds <= 0) {
-        clearInterval(countdownInterval);
-        window.location.href = 'https://new.ayanali.net';
-      }
-    }, 1000);
-  });
-</script>
